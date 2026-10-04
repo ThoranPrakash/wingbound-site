@@ -12,7 +12,7 @@ Then open http://localhost:8765
 
 ## Before launch
 
-1. **Booking form key**: get a free access key at https://web3forms.com, using writetonikhilkalyan@gmail.com. Paste it in `book.html` in place of `YOUR_WEB3FORMS_ACCESS_KEY`. Until then the form tells visitors to call or WhatsApp.
+1. **Contact form** (`book.html`): there's no form service. The form writes a message and opens the visitor's email app (to Nikhil, cc Thoran) or WhatsApp (+91 8332032455). There's nothing to set up.
 2. **Domain**: the site is temporarily hosted at https://thoranprakash.github.io/wingbound-site/. When the domain is ready, replace `https://thoranprakash.github.io/wingbound-site` with it in every `.html` file, `sitemap.xml` and `robots.txt`. It appears in the canonical, Open Graph and schema tags. In the repo's **Settings → Pages → Custom domain**, add the domain too.
 3. **Downloads**: add `downloads/wingbound-proposal.pdf` and `downloads/wingbound-flyer.pdf`. Every page links to the proposal.
 4. **Photos**: replace each dashed "Photo placeholder" box with an `<img>` that has alt text. Use only photos with parental consent.
@@ -33,10 +33,10 @@ Then open http://localhost:8765
 - `schools.html`: for schools and colleges
 - `about.html`: about us
 - `gallery.html`: gallery
-- `book.html`: booking form
+- `book.html`: contact / show-interest form (email or WhatsApp)
 - `faq.html`: FAQ
 - `assets/css/styles.css`: all styles; brand colours are tokens at the top
-- `assets/js/main.js`: mobile menu, form submission, icons
+- `assets/js/main.js`: mobile menu, contact form, flying-plane animations, icons
 - `assets/img/`: logo, plane (PNG and WebP), favicons, social share image
 
 The header and footer are repeated in each page. If you change a nav link or contact detail, update all nine files.

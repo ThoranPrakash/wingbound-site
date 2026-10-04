@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Book a Workshop | WingBound Aeromodelling &amp; AI Workshops</title>
-<meta name="description" content="Book a WingBound aeromodelling and AI workshop for your school or college in Andhra Pradesh. Call, WhatsApp or send a request.">
+<title>Contact Us | WingBound Aeromodelling &amp; AI Workshops</title>
+<meta name="description" content="Get in touch with WingBound about RC aircraft and AI workshops in Andhra Pradesh. Schools, colleges, students and parents can reach us by email or WhatsApp.">
 <link rel="canonical" href="https://thoranprakash.github.io/wingbound-site/book.html">
 <meta name="theme-color" content="#0F1115">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="WingBound">
-<meta property="og:title" content="Book a Workshop | WingBound Aeromodelling &amp; AI Workshops">
-<meta property="og:description" content="Book a WingBound aeromodelling and AI workshop for your school or college in Andhra Pradesh. Call, WhatsApp or send a request.">
+<meta property="og:title" content="Contact Us | WingBound Aeromodelling &amp; AI Workshops">
+<meta property="og:description" content="Get in touch with WingBound about RC aircraft and AI workshops in Andhra Pradesh. Schools, colleges, students and parents can reach us by email or WhatsApp.">
 <meta property="og:url" content="https://thoranprakash.github.io/wingbound-site/book.html">
 <meta property="og:image" content="https://thoranprakash.github.io/wingbound-site/assets/img/og-image.jpg">
 <meta property="og:locale" content="en_IN">
@@ -66,10 +66,10 @@
   <div class="glow" aria-hidden="true"></div>
   <svg class="sky sky--page " viewBox="0 0 1200 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><path id="fp-page" d="M-60 250 C 220 290, 400 110, 640 150 S 1000 70, 1280 110" fill="none" stroke="none"/><path d="M-60 250 C 220 290, 400 110, 640 150 S 1000 70, 1280 110" class="sky-path" stroke-dasharray="2 10"/><path d="M-60 250 C 220 290, 400 110, 640 150 S 1000 70, 1280 110" class="sky-trail" pathLength="1" stroke-dasharray="1 1"><animate attributeName="stroke-dashoffset" values="1;0;0" keyTimes="0;0.7;1" dur="17s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;1;0" keyTimes="0;0.7;0.95" dur="17s" repeatCount="indefinite"/></path><g class="sky-plane"><use href="#rc-plane" x="-23.0" y="-23.0" width="46" height="46"/><animateMotion dur="17s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.7;1"><mpath href="#fp-page"/></animateMotion></g></svg>
   <div class="container">
-    <p class="breadcrumb"><a href="index.html">Home</a> / Book a workshop</p>
-    <span class="label">Book a workshop</span>
-    <h1>Let's plan your workshop</h1>
-    <p>Tell us a little about your institution. We will get back to you to talk through dates and arrange a site visit.</p>
+    <p class="breadcrumb"><a href="index.html">Home</a> / Contact us</p>
+    <span class="label">Contact us</span>
+    <h1>Let's connect</h1>
+    <p>Schools, colleges, students and parents are all welcome. Tell us what you are interested in and send it to us by email or WhatsApp.</p>
     
   </div>
 </section>
@@ -78,88 +78,72 @@
 <section class="section" aria-labelledby="form-title">
   <div class="container split split--top">
     <div class="card">
-      <h2 id="form-title" class="sub-head">Workshop request</h2>
-      <form id="booking-form" class="form" action="https://api.web3forms.com/submit" method="POST">
-        <!-- TODO: paste your free Web3Forms access key (web3forms.com, sent to writetonikhilkalyan@gmail.com) -->
-        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
-        <input type="hidden" name="subject" value="New workshop request from the WingBound website">
-        <input type="hidden" name="from_name" value="WingBound website">
-        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-
+      <h2 id="form-title" class="sub-head">Show your interest</h2>
+      <p class="muted">Fill in a few details, then choose how to send them. Your email app or WhatsApp opens with the message ready to send.</p>
+      <form id="contact-form" class="form" action="mailto:writetonikhilkalyan@gmail.com" method="post" enctype="text/plain">
         <div class="form-row">
           <div class="field">
             <label for="name">Your name <span class="req" aria-hidden="true">*</span></label>
             <input id="name" name="name" type="text" autocomplete="name" required>
           </div>
           <div class="field">
-            <label for="role">Your role <span class="req" aria-hidden="true">*</span></label>
-            <select id="role" name="role" required>
-              <option value="">Select…</option>
-              <option>Principal</option>
-              <option>Teacher</option>
-              <option>HOD</option>
+            <label for="who">I am</label>
+            <select id="who" name="who">
+              <option>An individual / student</option>
+              <option>A parent</option>
+              <option>From a school</option>
+              <option>From a college</option>
               <option>Other</option>
             </select>
           </div>
         </div>
         <div class="form-row">
           <div class="field">
-            <label for="institution">Institution <span class="req" aria-hidden="true">*</span></label>
-            <input id="institution" name="institution" type="text" autocomplete="organization" required>
+            <label for="organisation">School, college or organisation</label>
+            <input id="organisation" name="organisation" type="text" autocomplete="organization" aria-describedby="org-hint">
+            <span class="hint" id="org-hint">Optional</span>
           </div>
           <div class="field">
-            <label for="city">City <span class="req" aria-hidden="true">*</span></label>
-            <input id="city" name="city" type="text" autocomplete="address-level2" required>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="field">
-            <label for="phone">Phone <span class="req" aria-hidden="true">*</span></label>
-            <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" pattern="[0-9+\(\)\s\-]{10,16}" title="10 to 16 digits, e.g. +91 98765 43210" required>
-          </div>
-          <div class="field">
-            <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
-            <input id="email" name="email" type="email" autocomplete="email" required>
+            <label for="city">City</label>
+            <input id="city" name="city" type="text" autocomplete="address-level2">
           </div>
         </div>
         <div class="form-row">
           <div class="field">
-            <label for="students">Number of students</label>
-            <input id="students" name="students" type="number" min="30" step="1" inputmode="numeric" aria-describedby="students-hint">
-            <span class="hint" id="students-hint">Minimum 30. Batches of 30–60.</span>
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" pattern="[0-9+\(\)\s\-]{10,16}" title="10 to 16 digits, e.g. +91 98765 43210">
           </div>
           <div class="field">
-            <label for="classes">Classes or branches</label>
-            <input id="classes" name="classes" type="text" placeholder="e.g. Class 8–10, or Mechanical">
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="field">
-            <label for="package">Preferred package</label>
-            <select id="package" name="package">
-              <option value="Not sure yet">Not sure yet</option>
-              <option data-key="2day" value="2-day build workshop">2-day build workshop</option>
-              <option data-key="1day" value="1-day workshop">1-day workshop</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="dates">Preferred dates</label>
-            <input id="dates" name="dates" type="text" placeholder="e.g. second week of December">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email">
           </div>
         </div>
         <div class="field">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="4"></textarea>
+          <label for="interest">Interested in</label>
+          <select id="interest" name="interest">
+            <option value="Workshops in general">Workshops in general</option>
+            <option data-key="2day" value="2-day build workshop">2-day build workshop</option>
+            <option data-key="1day" value="1-day workshop">1-day workshop</option>
+            <option value="AI and drones">AI and drones</option>
+            <option value="Something else">Something else</option>
+          </select>
         </div>
-        <p class="form-small">Fields marked <span class="req">*</span> are required. We use your details only to reply about your workshop.</p>
-        <button class="btn btn--primary btn--block" type="submit"><i data-lucide="send" aria-hidden="true"></i> Send request</button>
+        <div class="field">
+          <label for="message">Message <span class="req" aria-hidden="true">*</span></label>
+          <textarea id="message" name="message" rows="4" required placeholder="e.g. We would like a workshop for about 40 students in December."></textarea>
+        </div>
+        <p class="form-small">Fields marked <span class="req">*</span> are required. Nothing is stored on this website; your message goes straight from your email or WhatsApp to us.</p>
+        <div class="btn-row">
+          <button class="btn btn--primary" type="submit" name="via" value="email"><i data-lucide="mail" aria-hidden="true"></i> Send by email</button>
+          <button class="btn btn--whatsapp" type="submit" name="via" value="whatsapp"><i data-lucide="message-circle" aria-hidden="true"></i> Send on WhatsApp</button>
+        </div>
         <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
       </form>
     </div>
 
     <div class="grid" style="gap:20px">
       <div class="card">
-        <h2 class="sub-head">Prefer to talk?</h2>
+        <h2 class="sub-head">Or reach us directly</h2>
         <div class="contact-card">
           <strong>Nikhil Kalyan</strong>
           <a href="tel:+918332032455"><i data-lucide="phone" aria-hidden="true"></i> +91 83320 32455</a>
@@ -173,9 +157,9 @@
         </div>
       </div>
       <div class="card">
-        <h2 class="sub-head">What happens next</h2>
+        <h2 class="sub-head">For schools and colleges</h2>
         <ul class="icon-list">
-          <li><span class="badge "><i data-lucide="phone-call" aria-hidden="true"></i></span><div><strong>We get in touch</strong>to confirm your package and dates.</div></li>
+          <li><span class="badge "><i data-lucide="phone-call" aria-hidden="true"></i></span><div><strong>We get in touch</strong>to talk through the package and dates.</div></li>
           <li><span class="badge "><i data-lucide="map-pin" aria-hidden="true"></i></span><div><strong>We visit your campus</strong>to check the hall and ground.</div></li>
           <li><span class="badge "><i data-lucide="file-signature" aria-hidden="true"></i></span><div><strong>Agreement and invoice</strong>and you share consent forms with parents.</div></li>
           <li><span class="badge "><i data-lucide="plane-takeoff" aria-hidden="true"></i></span><div><strong>Workshop day</strong>then photos and certificates.</div></li>

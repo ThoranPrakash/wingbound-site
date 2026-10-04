@@ -625,3 +625,13 @@ td.desc { color: var(--navy-muted); }
 @media (prefers-reduced-motion: reduce) {
   .sky { display: none; }
 }
+
+/* Header spans the full width: logo far left, nav far right */
+.site-header .container { max-width: none; padding-inline: clamp(16px, 3vw, 40px); }
+
+/* Tables keep dark text even inside dark sections */
+.table-wrap { color: var(--navy); }
+.section--dark .table-wrap caption { color: var(--navy); }
+
+.btn--whatsapp { background: #1FA855; color: #fff; }
+.btn--whatsapp:hover { background: #188F47; box-shadow: 0 8px 22px rgba(31,168,85,0.35); }

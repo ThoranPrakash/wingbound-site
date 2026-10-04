@@ -70,59 +70,50 @@
     });
   }
 
-  // Pre-select package from ?package= on the booking page
+  // Pre-select the interest from ?package= on the contact page
   var pkg = new URLSearchParams(location.search).get("package");
-  var pkgSelect = document.getElementById("package");
+  var pkgSelect = document.getElementById("interest");
   if (pkg && pkgSelect) {
     Array.prototype.forEach.call(pkgSelect.options, function (o) {
       if (o.dataset.key === pkg) o.selected = true;
     });
   }
 
-  // Booking form — submit to Web3Forms with fetch, fall back to normal POST
-  var form = document.getElementById("booking-form");
+  // Contact form: builds a message and opens email or WhatsApp
+  var form = document.getElementById("contact-form");
   if (form) {
     var status = document.getElementById("form-status");
-    var btn = form.querySelector("button[type=submit]");
+    var val = function (id) { var el = document.getElementById(id); return el ? el.value.trim() : ""; };
     form.addEventListener("submit", function (e) {
-      if (!form.checkValidity()) return; // let the browser show errors
-      var key = form.querySelector("[name=access_key]").value;
-      if (!key || key.indexOf("YOUR_") === 0) {
-        e.preventDefault();
-        status.className = "form-status is-error";
-        status.textContent = "The form is not connected yet. Please call or WhatsApp +91 83320 32455, or email writetonikhilkalyan@gmail.com.";
-        return;
-      }
       e.preventDefault();
-      var original = btn.innerHTML;
-      btn.disabled = true;
-      btn.textContent = "Sending…";
-      status.className = "form-status";
-      fetch(form.action, {
-        method: "POST",
-        headers: { Accept: "application/json" },
-        body: new FormData(form)
-      })
-        .then(function (r) { return r.json(); })
-        .then(function (data) {
-          if (data.success) {
-            form.reset();
-            status.className = "form-status is-success";
-            status.textContent = "Thank you. We have your request and will get back to you soon.";
-          } else {
-            throw new Error(data.message || "Failed");
-          }
-        })
-        .catch(function () {
-          status.className = "form-status is-error";
-          status.textContent = "Sorry, something went wrong. Please call or WhatsApp +91 83320 32455, or email writetonikhilkalyan@gmail.com.";
-        })
-        .finally(function () {
-          btn.disabled = false;
-          btn.innerHTML = original;
-          status.setAttribute("tabindex", "-1");
-          status.focus();
-        });
+      if (!form.reportValidity()) return;
+      var via = (e.submitter && e.submitter.value) || "email";
+      var lines = [
+        "Hi WingBound,",
+        "",
+        val("message"),
+        "",
+        "Name: " + val("name"),
+        "I am: " + val("who"),
+        val("organisation") && "Organisation: " + val("organisation"),
+        val("city") && "City: " + val("city"),
+        val("phone") && "Phone: " + val("phone"),
+        val("email") && "Email: " + val("email"),
+        "Interested in: " + val("interest")
+      ].filter(function (l) { return l !== "" && l !== false; });
+      // keep blank lines after the greeting and message
+      var text = lines[0] + "\n\n" + lines[1] + "\n\n" + lines.slice(2).join("\n");
+      if (via === "whatsapp") {
+        window.open("https://wa.me/918332032455?text=" + encodeURIComponent(text), "_blank", "noopener");
+        status.className = "form-status is-success";
+        status.textContent = "WhatsApp is opening with your message. Press send there to reach us.";
+      } else {
+        var subject = "WingBound enquiry from " + val("name") + (val("organisation") ? ", " + val("organisation") : "");
+        location.href = "mailto:writetonikhilkalyan@gmail.com?cc=thoranprakash23@gmail.com&subject=" +
+          encodeURIComponent(subject) + "&body=" + encodeURIComponent(text);
+        status.className = "form-status is-success";
+        status.textContent = "Your email app is opening with the message. If nothing opens, email writetonikhilkalyan@gmail.com or use WhatsApp.";
+      }
     });
   }
 })();
