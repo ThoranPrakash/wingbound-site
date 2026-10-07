@@ -40,7 +40,7 @@ HAS_FLYER = os.path.exists(os.path.join(ROOT, FLYER))
 # Empty lists render as dashed "to add" slots so the gaps are obvious.
 # Set SHOW_EMPTY_SLOTS = False to hide empty sections on the live site.
 # ---------------------------------------------------------------------------
-SHOW_EMPTY_SLOTS = True
+SHOW_EMPTY_SLOTS = False
 # ("500+", "students taught")
 NUMBERS = []
 # ("Event name", "Organised by …", "Year", "Result")
@@ -469,12 +469,12 @@ def proof_section(heading_id="record-title"):
 # Illustrations (inline SVG, drawn from the real specifications)
 # ---------------------------------------------------------------------------
 def blueprint(compact=False):
-    """Top view of the WingBound trainer. 5 px = 1 cm."""
+    """Top-view outline of the WingBound trainer, with parts named but no measurements (those are taught in the workshop)."""
     cls = "blueprint blueprint--compact" if compact else "blueprint"
     return f"""<figure class="{cls}" data-draw>
   <svg viewBox="0 0 760 560" role="img" aria-labelledby="bp-title bp-desc">
     <title id="bp-title">Top-view drawing of the WingBound trainer aircraft</title>
-    <desc id="bp-desc">Wing span 108 cm, wing chord 17 cm, fuselage 75 cm, horizontal stabiliser 30 cm, vertical stabiliser 20 cm, 10 by 4.5 inch propeller.</desc>
+    <desc id="bp-desc">An outline of the foam-board trainer students build, seen from above, with its parts labelled: propeller, motor, wing, ailerons, wing span, fuselage, tailplane, elevator, and fin and rudder.</desc>
     <defs>
       <pattern id="bp-grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="rgba(255,255,255,.06)" stroke-width="1"/></pattern>
       <marker id="bp-arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#F7923A"/></marker>
@@ -490,29 +490,32 @@ def blueprint(compact=False):
       <path pathLength="1" d="M377 380 H383 V442 H377 Z"/>
       <path class="bp-hinge" d="M120 197 H250 M510 197 H640 M307 420 H453"/>
     </g>
-    <!-- dimensions -->
+    <!-- part names only: no values -->
     <g class="bp-dim">
-      <path pathLength="1" d="M110 222 V512 M650 222 V512 M305 442 V472 M455 442 V472 M658 130 H700 M658 215 H700 M352 60 H44 M366 435 H44"/>
+      <path pathLength="1" d="M110 222 V512 M650 222 V512 M352 60 H44 M366 435 H44"/>
       <path pathLength="1" marker-start="url(#bp-arrow)" marker-end="url(#bp-arrow)" d="M112 500 H648"/>
-      <path pathLength="1" marker-start="url(#bp-arrow)" marker-end="url(#bp-arrow)" d="M307 462 H453"/>
-      <path pathLength="1" marker-start="url(#bp-arrow)" marker-end="url(#bp-arrow)" d="M690 132 V213"/>
       <path pathLength="1" marker-start="url(#bp-arrow)" marker-end="url(#bp-arrow)" d="M56 62 V433"/>
-      <path pathLength="1" d="M386 400 L520 352 H600"/>
-      <path pathLength="1" d="M444 52 L520 30 H612"/>
+      <path pathLength="1" d="M444 52 L520 30 H624"/>
+      <path pathLength="1" d="M398 74 L520 96 H580"/>
+      <path pathLength="1" d="M590 192 L650 112 H720"/>
+      <path pathLength="1" d="M330 422 L262 462 H170"/>
+      <path pathLength="1" d="M448 410 L520 438 H624"/>
+      <path pathLength="1" d="M386 392 L520 352 H650"/>
     </g>
     <g class="bp-text">
-      <text x="380" y="492" text-anchor="middle">WING SPAN 108 CM</text>
-      <text x="380" y="458" text-anchor="middle" class="bp-sm">30 CM</text>
-      <text x="704" y="178" class="bp-sm">17 CM</text>
-      <text x="44" y="250" transform="rotate(-90 44 250)" text-anchor="middle">FUSELAGE 75 CM</text>
-      <text x="524" y="344" class="bp-sm">FIN 20 CM</text>
-      <text x="524" y="22" class="bp-sm">PROP 10 × 4.5</text>
-      <text x="200" y="180" class="bp-xs" text-anchor="middle">AILERON</text>
-      <text x="560" y="180" class="bp-xs" text-anchor="middle">AILERON</text>
+      <text x="380" y="490" text-anchor="middle">WING SPAN</text>
+      <text x="44" y="250" transform="rotate(-90 44 250)" text-anchor="middle">FUSELAGE</text>
+      <text x="290" y="178" text-anchor="middle" class="bp-sm">WING</text>
+      <text x="524" y="22" class="bp-sm">PROPELLER</text>
+      <text x="524" y="88" class="bp-sm">MOTOR</text>
+      <text x="720" y="104" text-anchor="end" class="bp-sm">AILERON</text>
+      <text x="170" y="454" class="bp-sm">ELEVATOR</text>
+      <text x="524" y="430" class="bp-sm">TAILPLANE</text>
+      <text x="524" y="344" class="bp-sm">FIN &amp; RUDDER</text>
     </g>
     <g class="bp-block">
-      <rect x="20" y="518" width="300" height="30" rx="4"/>
-      <text x="32" y="538">WB TRAINER · TOP VIEW · ≈ 800 G</text>
+      <rect x="20" y="518" width="210" height="30" rx="4"/>
+      <text x="32" y="538">WB TRAINER · TOP VIEW</text>
     </g>
   </svg>
 </figure>"""
@@ -547,9 +550,9 @@ def forces_diagram():
       <button type="button" class="force-btn" data-force="drag" aria-pressed="false"><span class="dot dot--drag"></span>Drag</button>
     </div>
     <div class="force-text" aria-live="polite">
-      <p data-force="lift"><strong>Lift</strong> holds the aeroplane up. The wing's airfoil shape and angle turn the passing air downwards, and the air pushes the wing up in return.</p>
-      <p data-force="weight" hidden><strong>Weight</strong> is gravity pulling the whole aircraft down. Our trainer weighs about 800 g, so its wing must make at least that much lift to stay up.</p>
-      <p data-force="thrust" hidden><strong>Thrust</strong> moves the aeroplane forward. The brushless motor spins the 10 × 4.5 propeller, which pulls the aircraft through the air.</p>
+      <p data-force="lift"><strong>Lift</strong> holds the aeroplane up. It comes from the wing as air flows over it.</p>
+      <p data-force="weight" hidden><strong>Weight</strong> is gravity pulling the whole aircraft down. The wing has to make enough lift to hold it up.</p>
+      <p data-force="thrust" hidden><strong>Thrust</strong> moves the aeroplane forward. The motor spins the propeller, which pulls the aircraft through the air.</p>
       <p data-force="drag" hidden><strong>Drag</strong> is the air resisting the aeroplane's motion. Smooth, light shapes keep drag low.</p>
     </div>
     <p class="forces-note">{icon("scale")} In steady, level flight, lift balances weight and thrust balances drag.</p>
@@ -558,12 +561,12 @@ def forces_diagram():
 
 
 PARTS = [
-    ("tx", "Transmitter", "FlySky FS-i6, 6-channel radio. The pilot's sticks send commands by radio."),
-    ("rx", "Receiver", "Picks up the radio signal and passes each channel to the ESC and servos."),
-    ("servo", "4 × SG90 servos", "Micro servos that move the control surfaces through linkages."),
-    ("batt", "LiPo battery", "3S 11.1 V, 3300 mAh. Stores the energy for the motor. Charged only by instructors."),
-    ("esc", "30A ESC", "Electronic speed controller. Sets the motor's speed from the throttle signal."),
-    ("motor", "Brushless motor", "A2212 1000KV. Spins the 10 × 4.5 propeller to make thrust."),
+    ("tx", "Transmitter", "The pilot's sticks send commands by radio."),
+    ("rx", "Receiver", "Picks up the commands and passes them on."),
+    ("servo", "Servos", "Small motors that move the control surfaces."),
+    ("batt", "Battery", "Stores the energy. Charged only by instructors."),
+    ("esc", "Speed controller", "Sets how fast the motor spins."),
+    ("motor", "Motor", "Spins the propeller to make thrust."),
 ]
 
 
@@ -573,7 +576,7 @@ def wiring_diagram():
                 f'<text x="{x + w / 2}" y="{y + h / 2 - 4}" text-anchor="middle" class="wd-title">{title}</text>'
                 f'<text x="{x + w / 2}" y="{y + h / 2 + 20}" text-anchor="middle" class="wd-sub">{sub}</text></g>')
     svg = f"""<svg viewBox="0 0 680 400" role="img" aria-labelledby="wd-title">
-  <title id="wd-title">How the aircraft's electronics connect: the battery powers the ESC, which drives the motor; the transmitter talks to the receiver by radio, and the receiver controls the ESC and four servos</title>
+  <title id="wd-title">How the aircraft's electronics connect: the battery powers the speed controller, which drives the motor; the transmitter talks to the receiver by radio, and the receiver controls the speed controller and the servos</title>
   <g class="wd-links">
     <path class="wd-radio" data-parts="tx rx" d="M182 85 H258"/>
     <path class="wd-sig" data-parts="rx servo" d="M422 85 H498"/>
@@ -582,12 +585,12 @@ def wiring_diagram():
     <path class="wd-pow" data-parts="esc motor" d="M422 315 H498"/>
   </g>
   <g class="wd-waves" data-parts="tx rx" aria-hidden="true"><path d="M204 70 q8 15 0 30 M216 64 q12 21 0 42 M228 58 q16 27 0 54"/></g>
-  {node("tx", 20, 45, 162, 80, "Transmitter", "FlySky FS-i6")}
-  {node("rx", 258, 45, 164, 80, "Receiver", "6 channels")}
-  {node("servo", 498, 45, 162, 80, "Servos", "4 × SG90")}
-  {node("batt", 20, 275, 162, 80, "Battery", "3S 3300 mAh")}
-  {node("esc", 258, 275, 164, 80, "ESC", "30 A")}
-  {node("motor", 498, 275, 162, 80, "Motor", "A2212 1000KV")}
+  {node("tx", 20, 45, 162, 80, "Transmitter", "Pilot")}
+  {node("rx", 258, 45, 164, 80, "Receiver", "In the plane")}
+  {node("servo", 498, 45, 162, 80, "Servos", "Control surfaces")}
+  {node("batt", 20, 275, 162, 80, "Battery", "Energy")}
+  {node("esc", 258, 275, 164, 80, "Controller", "Motor speed")}
+  {node("motor", 498, 275, 162, 80, "Motor", "Propeller")}
   <text x="348" y="205" class="wd-lbl">THROTTLE</text>
 </svg>"""
     items = "".join(
@@ -787,12 +790,12 @@ home = f"""<section class="hero" aria-labelledby="hero-title">
     <div>
       {section_head("Meet the trainer", "The aircraft every team builds", "A foam-board trainer, cut from a scaled build plan and fitted with real RC electronics. Built in two days.", hid="trainer-title")}
       <ul class="spec-chips" data-reveal>
-        <li><span>Wing span</span><strong>108 cm</strong></li>
-        <li><span>Weight</span><strong>≈ 800 g</strong></li>
-        <li><span>Motor</span><strong>A2212 1000KV</strong></li>
-        <li><span>Radio</span><strong>6-channel</strong></li>
+        <li><span>Airframe</span><strong>Foam board</strong></li>
+        <li><span>Power</span><strong>Electric motor</strong></li>
+        <li><span>Control</span><strong>RC radio</strong></li>
+        <li><span>Build time</span><strong>2 days</strong></li>
       </ul>
-      <a class="link-arrow mt-2" href="workshop.html#aircraft">Full specifications {icon("arrow-right")}</a>
+      <a class="link-arrow mt-2" href="workshop.html#aircraft">More about the build {icon("arrow-right")}</a>
     </div>
     <div data-reveal>{blueprint(compact=True)}</div>
   </div>
@@ -911,7 +914,7 @@ workshop = f"""{page_hero("The Workshop", "Two days from theory to take-off", "S
 <section class="section section--dark" aria-labelledby="wiring-title">
   <div class="glow" aria-hidden="true" style="right:-25%;top:-10%"></div>
   <div class="container">
-    {section_head("Module 03 · Electronics &amp; power", "How the parts connect", "Select a part to see what it does and where it plugs in. Students fit every one of these on Day 2.", hid="wiring-title")}
+    {section_head("Module 03 · Electronics &amp; power", "How the parts connect", "A quick look at the parts inside. Students learn how each one works, and fit them all on Day 2.", hid="wiring-title")}
     <div data-reveal>{wiring_diagram()}</div>
   </div>
 </section>
@@ -919,44 +922,13 @@ workshop = f"""{page_hero("The Workshop", "Two days from theory to take-off", "S
 <section class="section section--blueprint" id="aircraft" aria-labelledby="aircraft-title">
   <div class="container">
     {section_head("The aircraft", "A real trainer, built by students", "Each team builds a foam-board trainer from a scaled build plan.", hid="aircraft-title")}
-    <div class="aircraft">
-      <div class="aircraft-col aircraft-col--art">
-        <div class="ac-bp" data-reveal>{blueprint()}</div>
-        <div class="spec ac-mat" data-reveal>
-          <h3>{icon("layers")} Materials</h3>
-          <dl>
-            <div><dt>Airframe</dt><dd>Foam board / Depron</dd></div>
-            <div><dt>Reinforcement</dt><dd>Balsa and plywood</dd></div>
-            <div><dt>Spars and rods</dt><dd>Carbon fibre tubes / aluminium rods</dd></div>
-            <div><dt>Linkages</dt><dd>Pushrods and control horns</dd></div>
-            <div><dt>Adhesives</dt><dd>Hot glue and CA glue</dd></div>
-            <div><dt>Templates</dt><dd>Scaled, printed build plans</dd></div>
-          </dl>
-        </div>
-      </div>
-      <div class="aircraft-col">
-        <div class="spec ac-size" data-reveal>
-          <h3>{icon("ruler")} Size</h3>
-          <dl>
-            <div><dt>Wing span</dt><dd>108 cm</dd></div>
-            <div><dt>Chord</dt><dd>17 cm</dd></div>
-            <div><dt>Fuselage</dt><dd>75 cm</dd></div>
-            <div><dt>Horizontal stabiliser</dt><dd>30 cm</dd></div>
-            <div><dt>Vertical stabiliser</dt><dd>20 cm</dd></div>
-            <div><dt>Weight</dt><dd>About 800 g</dd></div>
-          </dl>
-        </div>
-        <div class="spec ac-elec" data-reveal>
-          <h3>{icon("cpu")} Electronics</h3>
-          <dl>
-            <div><dt>Motor</dt><dd>A2212 1000KV brushless</dd></div>
-            <div><dt>Speed controller</dt><dd>30A ESC</dd></div>
-            <div><dt>Servos</dt><dd>4 × SG90 micro</dd></div>
-            <div><dt>Battery</dt><dd>3S 11.1V 3300 mAh LiPo</dd></div>
-            <div><dt>Radio</dt><dd>FlySky FS-i6, 6-channel</dd></div>
-            <div><dt>Propeller</dt><dd>10 × 4.5</dd></div>
-          </dl>
-        </div>
+    <div class="split">
+      <div data-reveal>{blueprint()}</div>
+      <div class="pillars">
+        <article class="pillar" data-reveal>{badge("layers")}<div><h3>A foam-board airframe</h3><p>Cut and assembled by each team from a scaled build plan.</p></div></article>
+        <article class="pillar" data-reveal>{badge("cpu")}<div><h3>Real RC electronics</h3><p>A motor, servos, a battery and a radio, the same kind of kit RC pilots fly with.</p></div></article>
+        <article class="pillar" data-reveal>{badge("users")}<div><h3>Built in teams</h3><p>Teams of 4–5 build their aircraft over two days, with all tools provided.</p></div></article>
+        <article class="pillar" data-reveal>{badge("plane-takeoff")}<div><h3>Flown on your campus</h3><p>Our pilots fly it in a supervised demo on your ground.</p></div></article>
       </div>
     </div>
   </div>

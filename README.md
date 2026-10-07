@@ -5,6 +5,8 @@ https://thoranprakash.github.io/wingbound-site/
 
 ## Editing content
 
+Keep it a gist: the site says *what* students learn, not the workshop material itself (no measurements, part numbers or calculations).
+
 All page text lives in one file: `src/build.py`. Edit it, then rebuild:
 
 ```bash
@@ -26,7 +28,7 @@ COMPETITIONS = [("Event name", "Organised by …", "2023", "1st place")]
 QUOTES = [("Quote text", "Name", "Role", "Institution")]
 ```
 
-While a list is empty, the site shows a dashed "To add" box in its place. To hide those boxes on the live site, set `SHOW_EMPTY_SLOTS = False`.
+While a list is empty, its section is hidden (`SHOW_EMPTY_SLOTS = False`). Set it to `True` to see dashed "To add" boxes where the content will go.
 
 ### Adding icons
 
@@ -55,7 +57,7 @@ Then open http://localhost:8765
 
 ## Before launch
 
-1. **Social proof**: fill `NUMBERS`, `COMPETITIONS` and `QUOTES` (see above), or set `SHOW_EMPTY_SLOTS = False`.
+1. **Social proof**: fill `NUMBERS`, `COMPETITIONS` and `QUOTES` (see above). Empty ones stay hidden.
 2. **Team**: add the name of team member 4, and roles for everyone if you want them (search `Team member 4` in `src/build.py`).
 3. **Downloads**: put `wingbound-proposal.pdf` and `wingbound-flyer.pdf` in `downloads/` and rebuild. Download buttons appear automatically once the files exist.
 4. **Photos**: the gallery shows a "Photos are on their way" panel. Use only photos with parental consent.
@@ -71,7 +73,7 @@ The form stores nothing. It writes a message and opens WhatsApp (+91 62818 43302
 | File | Page |
 | --- | --- |
 | `index.html` | Home |
-| `workshop.html` | The Workshop: outcomes, forces of flight, schedule, electronics, aircraft blueprint |
+| `workshop.html` | The Workshop: outcomes, forces of flight, schedule, how the parts connect, the aircraft |
 | `ai-aviation.html` | AI & Aviation |
 | `safety.html` | Safety, with the flight-day layout |
 | `schools.html` | For Schools & Colleges: who provides what, booking, packages |
