@@ -13,16 +13,18 @@
 <meta property="og:description" content="WingBound is a team of four RC aircraft builders and pilots from Visakhapatnam with 10 years of experience and multiple competition wins.">
 <meta property="og:url" content="https://thoranprakash.github.io/wingbound-site/about.html">
 <meta property="og:image" content="https://thoranprakash.github.io/wingbound-site/assets/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_IN">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon-64.png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&amp;family=Michroma&amp;display=swap">
-<link rel="stylesheet" href="assets/css/styles.css">
-<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js" defer></script>
-<script src="assets/js/main.js" defer></script>
+<link rel="preload" href="assets/fonts/lato-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/lato-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/styles.css?v=a92b5c36">
+<script>document.documentElement.classList.add("js")</script>
+<script src="assets/js/main.js?v=bbc280e7" defer></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thoranprakash.github.io/wingbound-site/"}, {"@type": "ListItem", "position": 2, "name": "About us", "item": "https://thoranprakash.github.io/wingbound-site/about.html"}]}</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -37,100 +39,103 @@
   </symbol>
 </svg>
 <header class="site-header">
-  <div class="container">
+  <div class="header-inner">
     <a class="brand" href="index.html" aria-label="WingBound home">
       <picture><source srcset="assets/img/logo-240.webp" type="image/webp"><img src="assets/img/logo-240.png" alt="" width="240" height="165"></picture>
       <span class="brand-word">WINGBOUND</span>
     </a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
-      <i data-lucide="menu" class="icon-open" aria-hidden="true"></i><i data-lucide="x" class="icon-close" aria-hidden="true"></i>
-    </button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="workshop.html">The Workshop</a></li>
-        <li><a href="ai-aviation.html">AI &amp; Aviation</a></li>
-        <li><a href="safety.html">Safety</a></li>
-        <li><a href="schools.html">For Schools</a></li>
-        <li><a href="about.html" aria-current="page">About</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li class="nav-cta"><a class="btn btn--primary" href="book.html">Book a workshop</a></li>
+      <ul class="nav-links">
+        <li><a href="workshop.html">The Workshop</a></li><li><a href="ai-aviation.html">AI &amp; Aviation</a></li><li><a href="safety.html">Safety</a></li><li><a href="schools.html">For Schools</a></li><li><a href="about.html" aria-current="page">About</a></li><li><a href="faq.html">FAQ</a></li>
       </ul>
+      <a class="btn btn--primary nav-cta" href="contact.html">Get in touch <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></a>
+      <div class="nav-quick">
+        <a href="tel:+916281843302"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg> Call +91 62818 43302</a>
+        <a href="https://wa.me/916281843302?text=Hi%20WingBound%2C%20I%27d%20like%20to%20know%20more%20about%20your%20workshops." target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 3C8.86 3 3.03 8.82 3.03 16c0 2.3.6 4.53 1.74 6.5L3 29l6.68-1.75A13 13 0 0 0 16.04 29C23.2 29 29 23.18 29 16S23.2 3 16.04 3Zm0 23.8c-2 0-3.94-.53-5.64-1.55l-.4-.24-3.97 1.04 1.06-3.86-.26-.4A10.77 10.77 0 0 1 5.24 16c0-5.95 4.85-10.8 10.8-10.8 5.94 0 10.77 4.85 10.77 10.8 0 5.96-4.83 10.8-10.77 10.8Zm5.92-8.08c-.33-.16-1.93-.95-2.23-1.06-.3-.11-.52-.16-.73.17-.22.32-.84 1.05-1.03 1.27-.19.22-.38.24-.7.08-.33-.16-1.38-.51-2.62-1.62-.97-.86-1.62-1.93-1.81-2.25-.19-.33-.02-.5.14-.66.15-.15.33-.38.49-.57.16-.19.22-.33.33-.54.11-.22.05-.41-.03-.57-.08-.16-.73-1.76-1-2.41-.26-.63-.53-.55-.73-.56h-.62c-.22 0-.57.08-.87.41-.3.32-1.14 1.11-1.14 2.71s1.17 3.15 1.33 3.36c.16.22 2.3 3.5 5.56 4.91.78.34 1.39.54 1.86.69.78.25 1.49.21 2.05.13.63-.09 1.93-.79 2.2-1.55.27-.76.27-1.42.19-1.55-.08-.14-.3-.22-.62-.38Z"/></svg> WhatsApp us</a>
+      </div>
     </nav>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
   </div>
   <div class="flight-progress" aria-hidden="true"><span class="fp-trail"></span><svg class="fp-plane" viewBox="-32 -32 64 64"><use href="#rc-plane"/></svg></div>
 </header>
 <main id="main">
 <section class="page-hero">
   <div class="glow" aria-hidden="true"></div>
-  <svg class="sky sky--page " viewBox="0 0 1200 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><path id="fp-page" d="M-60 250 C 220 290, 400 110, 640 150 S 1000 70, 1280 110" fill="none" stroke="none"/><path d="M-60 250 C 220 290, 400 110, 640 150 S 1000 70, 1280 110" class="sky-path" stroke-dasharray="2 10"/><path d="M-60 250 C 220 290, 400 110, 640 150 S 1000 70, 1280 110" class="sky-trail" pathLength="1" stroke-dasharray="1 1"><animate attributeName="stroke-dashoffset" values="1;0;0" keyTimes="0;0.7;1" dur="17s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;1;0" keyTimes="0;0.7;0.95" dur="17s" repeatCount="indefinite"/></path><g class="sky-plane"><use href="#rc-plane" x="-23.0" y="-23.0" width="46" height="46"/><animateMotion dur="17s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.7;1"><mpath href="#fp-page"/></animateMotion></g></svg>
+  <svg class="sky sky--page " viewBox="0 0 1200 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><path id="fp-page" d="M-60 250 C 220 290, 400 110, 640 150 S 1000 70, 1280 110" fill="none" stroke="none"/><path d="M-60 250 C 220 290, 400 110, 640 150 S 1000 70, 1280 110" class="sky-path" stroke-dasharray="2 10"/><path d="M-60 250 C 220 290, 400 110, 640 150 S 1000 70, 1280 110" class="sky-trail" pathLength="1" stroke-dasharray="1 1"><animate attributeName="stroke-dashoffset" values="1;0;0" keyTimes="0;0.7;1" dur="17s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;1;0" keyTimes="0;0.7;0.95" dur="17s" repeatCount="indefinite"/></path><g class="sky-plane"><use href="#rc-plane" x="-22.0" y="-22.0" width="44" height="44"/><animateMotion dur="17s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.7;1"><mpath href="#fp-page"/></animateMotion></g></svg>
   <div class="container">
-    <p class="breadcrumb"><a href="index.html">Home</a> / About us</p>
+    <p class="breadcrumb"><a href="index.html">Home</a> <span aria-hidden="true">/</span> About us</p>
     <span class="label">About us</span>
     <h1>Four pilots. Ten years. One mission.</h1>
-    <p>We are a team of four RC aircraft builders and pilots from Visakhapatnam. We want every student to feel what it is like to build something that flies.</p>
+    <p class="page-hero-sub">We are a team of four RC aircraft builders and pilots from Visakhapatnam. We want every student to feel what it is like to build something that flies.</p>
     
   </div>
 </section>
 
 
-<section class="section" aria-labelledby="story-title">
+<section class="section section--white" aria-labelledby="story-title">
   <div class="container split split--top">
-    <div class="prose">
+    <div class="prose" data-reveal>
       <span class="label">Our story</span>
       <h2 id="story-title">From hobby to classroom</h2>
       <p>For 10 years we have designed, built and flown RC aircraft. Along the way we competed in, and won, multiple competitions organised by Boeing in partnership with IIT Madras, NIT Warangal and Vignan University.</p>
       <p>We started WingBound to share that experience with students. We have run workshops at Vignan's Institute of Information Technology in Visakhapatnam and at Malla Reddy College of Engineering and Technology in Hyderabad.</p>
       <p>Today we bring the full workshop to school and college campuses across Andhra Pradesh.</p>
-      <p class="note">Boeing organised these competitions. Boeing is not a partner or sponsor of WingBound.</p>
     </div>
-    <div class="placeholder" role="img" aria-label="Photo placeholder: The WingBound team with their aircraft">
-  <div><i data-lucide="users" aria-hidden="true"></i><strong>Photo placeholder</strong>The WingBound team with their aircraft</div>
-</div>
+    <ul class="facts" data-reveal>
+      <li><span class="facts-k">Based in</span><strong>Visakhapatnam</strong></li>
+      <li><span class="facts-k">Team</span><strong>Four builders and pilots</strong></li>
+      <li><span class="facts-k">Experience</span><strong>10 years of RC aircraft</strong></li>
+      <li><span class="facts-k">We serve</span><strong>Schools and colleges across Andhra Pradesh</strong></li>
+    </ul>
   </div>
 </section>
 
+<section class="section" aria-labelledby="about-record-title">
+  <div class="container">
+    <div class="section-head" data-reveal><span class="label">Track record</span><h2 id="about-record-title">Built and flown by people who compete</h2><p>WingBound is a team of four RC aircraft builders and pilots from Visakhapatnam.</p></div>
+    <div class="proof-grid">
+      <article class="proof-hero" data-reveal>
+        <span class="proof-big">10<small>years</small></span>
+        <p>Designing, building and flying RC aircraft.</p>
+      </article>
+      <article class="card" data-reveal><span class="badge "><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" /><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" /><path d="M4 22h16" /><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" /><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" /><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" /></svg></span><h3>Competition winners</h3><p>We have competed in, and won, multiple competitions organised by Boeing in partnership with IIT Madras, NIT Warangal and Vignan University.</p></article>
+      <article class="card" data-reveal><span class="badge "><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 22v-4a2 2 0 1 0-4 0v4" /><path d="m18 10 3.447 1.724a1 1 0 0 1 .553.894V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7.382a1 1 0 0 1 .553-.894L6 10" /><path d="M18 5v17" /><path d="m4 6 7.106-3.553a2 2 0 0 1 1.788 0L20 6" /><path d="M6 5v17" /><circle cx="12" cy="9" r="2" /></svg></span><h3>Workshops delivered</h3>
+        <ul class="plain-list"><li><strong>Vignan's Institute of Information Technology</strong>Visakhapatnam</li><li><strong>Malla Reddy College of Engineering and Technology</strong>Hyderabad</li></ul>
+      </article>
+    </div>
+    <div class="slot" data-reveal><strong><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10" /><path d="M8 12h8" /><path d="M12 8v8" /></svg> To add: workshop numbers</strong><span>Real totals so far, e.g. students taught, workshops run, institutions visited.</span></div>
+    <div class="slot" data-reveal><strong><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10" /><path d="M8 12h8" /><path d="M12 8v8" /></svg> To add: competition results</strong><span>For each win: event name, organiser, year and placing.</span></div>
+    <div class="slot" data-reveal><strong><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10" /><path d="M8 12h8" /><path d="M12 8v8" /></svg> To add: feedback quotes</strong><span>Real words from teachers, HODs or students at VIIT or MRCET, with their name, role and permission.</span></div>
+    <p class="note">Boeing organised these competitions. Boeing is not a partner or sponsor of WingBound.</p>
+  </div>
+</section>
+
+
 <section class="section section--white" aria-labelledby="team-title">
   <div class="container">
-    <div class="section-head">
-      <span class="label">The team</span>
-      <h2 id="team-title">Meet the people who fly</h2>
-    </div>
-    <div class="grid grid-4">
-      <article class="card">
-        <div class="placeholder" role="img" aria-label="Photo placeholder: Nikhil Kalyan">
-  <div><i data-lucide="user" aria-hidden="true"></i><strong>Photo placeholder</strong>Nikhil Kalyan</div>
-</div>
-        <h3 class="mt-1">Nikhil Kalyan</h3>
-        <div class="contact-card">
-          <a href="tel:+918332032455"><i data-lucide="phone" aria-hidden="true"></i> +91 83320 32455</a>
-          <a href="mailto:writetonikhilkalyan@gmail.com"><i data-lucide="mail" aria-hidden="true"></i> Email Nikhil</a>
-        </div>
+    <div class="section-head" data-reveal><span class="label">The team</span><h2 id="team-title">Meet the people who fly</h2></div>
+    <div class="team">
+      <article class="person" data-reveal>
+        <div class="avatar" aria-hidden="true">NK</div>
+        <h3>Nikhil Kalyan</h3>
+        <div class="person-links"><a href="tel:+916281843302" aria-label="Call Nikhil"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg></a><a href="mailto:writetonikhilkalyan@gmail.com" aria-label="Email Nikhil"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg></a></div>
       </article>
-      <article class="card">
-        <div class="placeholder" role="img" aria-label="Photo placeholder: Thoran Prakash">
-  <div><i data-lucide="user" aria-hidden="true"></i><strong>Photo placeholder</strong>Thoran Prakash</div>
-</div>
-        <h3 class="mt-1">Thoran Prakash</h3>
-        <div class="contact-card">
-          <a href="tel:+919581546640"><i data-lucide="phone" aria-hidden="true"></i> +91 95815 46640</a>
-          <a href="mailto:thoranprakash23@gmail.com"><i data-lucide="mail" aria-hidden="true"></i> Email Thoran</a>
-        </div>
+      <article class="person" data-reveal>
+        <div class="avatar" aria-hidden="true">TP</div>
+        <h3>Thoran Prakash</h3>
+        <div class="person-links"><a href="tel:+919581546640" aria-label="Call Thoran"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg></a><a href="mailto:thoranprakash23@gmail.com" aria-label="Email Thoran"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg></a></div>
       </article>
-      <article class="card">
-        <div class="placeholder" role="img" aria-label="Photo placeholder: Team member 3">
-  <div><i data-lucide="user" aria-hidden="true"></i><strong>Photo placeholder</strong>Team member 3</div>
-</div>
-        <h3 class="mt-1">[Team member 3]</h3>
-        <p>[Name and role to be added]</p>
+      <article class="person" data-reveal>
+        <div class="avatar" aria-hidden="true">SV</div>
+        <h3>Sai Supreeth Varma</h3>
+        <div class="person-links"><a href="tel:+916300032574" aria-label="Call Sai"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg></a></div>
       </article>
-      <article class="card">
-        <div class="placeholder" role="img" aria-label="Photo placeholder: Team member 4">
-  <div><i data-lucide="user" aria-hidden="true"></i><strong>Photo placeholder</strong>Team member 4</div>
-</div>
-        <h3 class="mt-1">[Team member 4]</h3>
-        <p>[Name and role to be added]</p>
+      <article class="person person--todo" data-reveal>
+        <div class="avatar" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg></div>
+        <h3>[Team member 4]</h3>
+        <p class="role">[Name and role to be added]</p>
       </article>
     </div>
   </div>
@@ -138,27 +143,24 @@
 
 <section class="section" aria-labelledby="values-title">
   <div class="container">
-    <div class="section-head">
-      <span class="label">How we work</span>
-      <h2 id="values-title">What you can expect from us</h2>
-    </div>
+    <div class="section-head" data-reveal><span class="label">How we work</span><h2 id="values-title">What you can expect from us</h2></div>
     <div class="grid grid-3">
-      <article class="card"><span class="badge "><i data-lucide="hand" aria-hidden="true"></i></span><h3>Hands-on</h3><p>Students learn by cutting, building and wiring, not just by watching slides.</p></article>
-      <article class="card"><span class="badge "><i data-lucide="shield-check" aria-hidden="true"></i></span><h3>Careful</h3><p>Only our pilots fly, and every step follows a clear <a href="safety.html">safety plan</a>.</p></article>
-      <article class="card"><span class="badge "><i data-lucide="handshake" aria-hidden="true"></i></span><h3>Easy to work with</h3><p>We bring everything, agree the plan up front and invoice the institution.</p></article>
+      <article class="card" data-reveal><span class="badge "><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2" /><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2" /><path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8" /><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" /></svg></span><h3>Hands-on</h3><p>Students learn by cutting, building and wiring, not just by watching slides.</p></article>
+      <article class="card" data-reveal><span class="badge "><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /><path d="m9 12 2 2 4-4" /></svg></span><h3>Careful</h3><p>Only our pilots fly, and every step follows a clear <a href="safety.html">safety plan</a>.</p></article>
+      <article class="card" data-reveal><span class="badge "><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m11 17 2 2a1 1 0 1 0 3-3" /><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4" /><path d="m21 3 1 11h-2" /><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3" /><path d="M3 4h8" /></svg></span><h3>Easy to work with</h3><p>We bring everything, agree the plan up front and invoice the institution.</p></article>
     </div>
   </div>
 </section>
 
 <section class="section section--dark cta-band" aria-labelledby="cta-title">
   <div class="glow" aria-hidden="true"></div>
-  <div class="container">
+  <div class="container" data-reveal>
     <span class="label">Ready for take-off?</span>
     <h2 id="cta-title">Bring WingBound to your campus</h2>
-    <p>Tell us your dates and how many students. We will visit to check your hall and ground, then plan the rest with you.</p>
+    <p>Tell us about your school or college and the dates you have in mind. We will visit to check your hall and ground, then plan the rest with you.</p>
     <div class="btn-row">
-      <a class="btn btn--primary" href="book.html"><i data-lucide="calendar-check" aria-hidden="true"></i> Book a workshop</a>
-      <a class="btn btn--ghost" href="downloads/wingbound-proposal.pdf" download><i data-lucide="download" aria-hidden="true"></i> Download proposal (PDF)</a>
+      <a class="btn btn--primary btn--lg" href="contact.html">Get in touch <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></a>
+      <a class="btn btn--ghost" href="https://wa.me/916281843302?text=Hi%20WingBound%2C%20I%27d%20like%20to%20know%20more%20about%20your%20workshops." target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 3C8.86 3 3.03 8.82 3.03 16c0 2.3.6 4.53 1.74 6.5L3 29l6.68-1.75A13 13 0 0 0 16.04 29C23.2 29 29 23.18 29 16S23.2 3 16.04 3Zm0 23.8c-2 0-3.94-.53-5.64-1.55l-.4-.24-3.97 1.04 1.06-3.86-.26-.4A10.77 10.77 0 0 1 5.24 16c0-5.95 4.85-10.8 10.8-10.8 5.94 0 10.77 4.85 10.77 10.8 0 5.96-4.83 10.8-10.77 10.8Zm5.92-8.08c-.33-.16-1.93-.95-2.23-1.06-.3-.11-.52-.16-.73.17-.22.32-.84 1.05-1.03 1.27-.19.22-.38.24-.7.08-.33-.16-1.38-.51-2.62-1.62-.97-.86-1.62-1.93-1.81-2.25-.19-.33-.02-.5.14-.66.15-.15.33-.38.49-.57.16-.19.22-.33.33-.54.11-.22.05-.41-.03-.57-.08-.16-.73-1.76-1-2.41-.26-.63-.53-.55-.73-.56h-.62c-.22 0-.57.08-.87.41-.3.32-1.14 1.11-1.14 2.71s1.17 3.15 1.33 3.36c.16.22 2.3 3.5 5.56 4.91.78.34 1.39.54 1.86.69.78.25 1.49.21 2.05.13.63-.09 1.93-.79 2.2-1.55.27-.76.27-1.42.19-1.55-.08-.14-.3-.22-.62-.38Z"/></svg> WhatsApp us</a>
     </div>
   </div>
 </section>
@@ -166,16 +168,19 @@
 </main>
 <footer class="site-footer">
   <div class="container">
-    <div class="footer-grid">
-      <div>
+    <div class="footer-top">
+      <div class="footer-brand">
         <a class="brand" href="index.html" aria-label="WingBound home">
           <picture><source srcset="assets/img/logo-240.webp" type="image/webp"><img src="assets/img/logo-240.png" alt="" width="240" height="165" loading="lazy"></picture>
           <span class="brand-word">WINGBOUND</span>
         </a>
-        <p class="footer-tag">DESIGN. BUILD. FLY.</p>
-        <p>Hands-on RC aircraft and AI workshops for schools and colleges in Andhra Pradesh. Based in Visakhapatnam.</p>
+        <p>Hands-on RC aircraft and AI workshops for schools and colleges across Andhra Pradesh. Based in Visakhapatnam.</p>
+        <div class="btn-row">
+          <a class="btn btn--primary btn--sm" href="contact.html">Get in touch <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></a>
+          <a class="btn btn--ghost btn--sm" href="https://wa.me/916281843302?text=Hi%20WingBound%2C%20I%27d%20like%20to%20know%20more%20about%20your%20workshops." target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 3C8.86 3 3.03 8.82 3.03 16c0 2.3.6 4.53 1.74 6.5L3 29l6.68-1.75A13 13 0 0 0 16.04 29C23.2 29 29 23.18 29 16S23.2 3 16.04 3Zm0 23.8c-2 0-3.94-.53-5.64-1.55l-.4-.24-3.97 1.04 1.06-3.86-.26-.4A10.77 10.77 0 0 1 5.24 16c0-5.95 4.85-10.8 10.8-10.8 5.94 0 10.77 4.85 10.77 10.8 0 5.96-4.83 10.8-10.77 10.8Zm5.92-8.08c-.33-.16-1.93-.95-2.23-1.06-.3-.11-.52-.16-.73.17-.22.32-.84 1.05-1.03 1.27-.19.22-.38.24-.7.08-.33-.16-1.38-.51-2.62-1.62-.97-.86-1.62-1.93-1.81-2.25-.19-.33-.02-.5.14-.66.15-.15.33-.38.49-.57.16-.19.22-.33.33-.54.11-.22.05-.41-.03-.57-.08-.16-.73-1.76-1-2.41-.26-.63-.53-.55-.73-.56h-.62c-.22 0-.57.08-.87.41-.3.32-1.14 1.11-1.14 2.71s1.17 3.15 1.33 3.36c.16.22 2.3 3.5 5.56 4.91.78.34 1.39.54 1.86.69.78.25 1.49.21 2.05.13.63-.09 1.93-.79 2.2-1.55.27-.76.27-1.42.19-1.55-.08-.14-.3-.22-.62-.38Z"/></svg> WhatsApp</a>
+        </div>
       </div>
-      <nav aria-label="Footer: workshop">
+      <nav class="footer-col" aria-label="Footer: workshop">
         <h2>Workshop</h2>
         <ul>
           <li><a href="workshop.html">The Workshop</a></li>
@@ -184,33 +189,33 @@
           <li><a href="gallery.html">Gallery</a></li>
         </ul>
       </nav>
-      <nav aria-label="Footer: schools">
+      <nav class="footer-col" aria-label="Footer: schools">
         <h2>Schools</h2>
         <ul>
           <li><a href="schools.html">For Schools &amp; Colleges</a></li>
-          <li><a href="book.html">Book a workshop</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li><a href="about.html">About us</a></li>
-          <li><a href="downloads/wingbound-proposal.pdf" download>Proposal (PDF)</a></li>
-          <li><a href="downloads/wingbound-flyer.pdf" download>Flyer (PDF)</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          
         </ul>
       </nav>
-      <div>
-        <h2>Contact</h2>
-        <ul>
-          <li><strong style="color:#fff">Nikhil Kalyan</strong><br><a href="tel:+918332032455">+91 83320 32455</a><br><a href="mailto:writetonikhilkalyan@gmail.com">writetonikhilkalyan@gmail.com</a></li>
-          <li><strong style="color:#fff">Thoran Prakash</strong><br><a href="tel:+919581546640">+91 95815 46640</a><br><a href="mailto:thoranprakash23@gmail.com">thoranprakash23@gmail.com</a></li>
+      <div class="footer-col">
+        <h2>Talk to us</h2>
+        <ul class="footer-contacts">
+          <li><strong>Nikhil Kalyan</strong><a href="tel:+916281843302">+91 62818 43302</a><a href="mailto:writetonikhilkalyan@gmail.com">writetonikhilkalyan@gmail.com</a></li>
+          <li><strong>Thoran Prakash</strong><a href="tel:+919581546640">+91 95815 46640</a><a href="mailto:thoranprakash23@gmail.com">thoranprakash23@gmail.com</a></li>
         </ul>
       </div>
     </div>
+    <svg class="footer-mark" viewBox="0 0 1000 104" aria-hidden="true" focusable="false"><text x="2" y="96" textLength="996" lengthAdjust="spacingAndGlyphs">DESIGN. BUILD. FLY.</text></svg>
     <div class="footer-bottom">
       <p>Student photos are shared only with parental consent.</p>
-      <p>&copy; <span data-year>2026</span> WingBound, Visakhapatnam. All rights reserved.</p>
+      <p>&copy; <span data-year>2026</span> WingBound, Visakhapatnam</p>
     </div>
   </div>
 </footer>
-<a class="wa-float" href="https://wa.me/918332032455?text=Hi%20WingBound%2C%20I%27d%20like%20to%20know%20more%20about%20a%20workshop%20for%20our%20institution." target="_blank" rel="noopener" aria-label="Chat with WingBound on WhatsApp (opens in a new tab)">
-  <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 3C8.86 3 3.03 8.82 3.03 16c0 2.3.6 4.53 1.74 6.5L3 29l6.68-1.75A13 13 0 0 0 16.04 29C23.2 29 29 23.18 29 16S23.2 3 16.04 3Zm0 23.8c-2 0-3.94-.53-5.64-1.55l-.4-.24-3.97 1.04 1.06-3.86-.26-.4A10.77 10.77 0 0 1 5.24 16c0-5.95 4.85-10.8 10.8-10.8 5.94 0 10.77 4.85 10.77 10.8 0 5.96-4.83 10.8-10.77 10.8Zm5.92-8.08c-.33-.16-1.93-.95-2.23-1.06-.3-.11-.52-.16-.73.17-.22.32-.84 1.05-1.03 1.27-.19.22-.38.24-.7.08-.33-.16-1.38-.51-2.62-1.62-.97-.86-1.62-1.93-1.81-2.25-.19-.33-.02-.5.14-.66.15-.15.33-.38.49-.57.16-.19.22-.33.33-.54.11-.22.05-.41-.03-.57-.08-.16-.73-1.76-1-2.41-.26-.63-.53-.55-.73-.56h-.62c-.22 0-.57.08-.87.41-.3.32-1.14 1.11-1.14 2.71s1.17 3.15 1.33 3.36c.16.22 2.3 3.5 5.56 4.91.78.34 1.39.54 1.86.69.78.25 1.49.21 2.05.13.63-.09 1.93-.79 2.2-1.55.27-.76.27-1.42.19-1.55-.08-.14-.3-.22-.62-.38Z"/></svg><span>WhatsApp us</span>
-</a>
+<aside aria-label="Quick contact">
+  <a class="wa-float" href="https://wa.me/916281843302?text=Hi%20WingBound%2C%20I%27d%20like%20to%20know%20more%20about%20your%20workshops." target="_blank" rel="noopener" aria-label="Chat with WingBound on WhatsApp (opens in a new tab)"><svg class="icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 3C8.86 3 3.03 8.82 3.03 16c0 2.3.6 4.53 1.74 6.5L3 29l6.68-1.75A13 13 0 0 0 16.04 29C23.2 29 29 23.18 29 16S23.2 3 16.04 3Zm0 23.8c-2 0-3.94-.53-5.64-1.55l-.4-.24-3.97 1.04 1.06-3.86-.26-.4A10.77 10.77 0 0 1 5.24 16c0-5.95 4.85-10.8 10.8-10.8 5.94 0 10.77 4.85 10.77 10.8 0 5.96-4.83 10.8-10.77 10.8Zm5.92-8.08c-.33-.16-1.93-.95-2.23-1.06-.3-.11-.52-.16-.73.17-.22.32-.84 1.05-1.03 1.27-.19.22-.38.24-.7.08-.33-.16-1.38-.51-2.62-1.62-.97-.86-1.62-1.93-1.81-2.25-.19-.33-.02-.5.14-.66.15-.15.33-.38.49-.57.16-.19.22-.33.33-.54.11-.22.05-.41-.03-.57-.08-.16-.73-1.76-1-2.41-.26-.63-.53-.55-.73-.56h-.62c-.22 0-.57.08-.87.41-.3.32-1.14 1.11-1.14 2.71s1.17 3.15 1.33 3.36c.16.22 2.3 3.5 5.56 4.91.78.34 1.39.54 1.86.69.78.25 1.49.21 2.05.13.63-.09 1.93-.79 2.2-1.55.27-.76.27-1.42.19-1.55-.08-.14-.3-.22-.62-.38Z"/></svg><span>WhatsApp us</span></a>
+</aside>
 </body>
 </html>

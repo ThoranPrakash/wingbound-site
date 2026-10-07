@@ -13,16 +13,18 @@
 <meta property="og:description" content="How AI makes aircraft smarter: sense, think, act. A drone and AI workshop for students, with a follow-up project using ArduPilot, INAV and Teachable Machine.">
 <meta property="og:url" content="https://thoranprakash.github.io/wingbound-site/ai-aviation.html">
 <meta property="og:image" content="https://thoranprakash.github.io/wingbound-site/assets/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_IN">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon-64.png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&amp;family=Michroma&amp;display=swap">
-<link rel="stylesheet" href="assets/css/styles.css">
-<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js" defer></script>
-<script src="assets/js/main.js" defer></script>
+<link rel="preload" href="assets/fonts/lato-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/lato-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/styles.css?v=a92b5c36">
+<script>document.documentElement.classList.add("js")</script>
+<script src="assets/js/main.js?v=bbc280e7" defer></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thoranprakash.github.io/wingbound-site/"}, {"@type": "ListItem", "position": 2, "name": "AI & Aviation", "item": "https://thoranprakash.github.io/wingbound-site/ai-aviation.html"}]}</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -37,101 +39,111 @@
   </symbol>
 </svg>
 <header class="site-header">
-  <div class="container">
+  <div class="header-inner">
     <a class="brand" href="index.html" aria-label="WingBound home">
       <picture><source srcset="assets/img/logo-240.webp" type="image/webp"><img src="assets/img/logo-240.png" alt="" width="240" height="165"></picture>
       <span class="brand-word">WINGBOUND</span>
     </a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
-      <i data-lucide="menu" class="icon-open" aria-hidden="true"></i><i data-lucide="x" class="icon-close" aria-hidden="true"></i>
-    </button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="workshop.html">The Workshop</a></li>
-        <li><a href="ai-aviation.html" aria-current="page">AI &amp; Aviation</a></li>
-        <li><a href="safety.html">Safety</a></li>
-        <li><a href="schools.html">For Schools</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li class="nav-cta"><a class="btn btn--primary" href="book.html">Book a workshop</a></li>
+      <ul class="nav-links">
+        <li><a href="workshop.html">The Workshop</a></li><li><a href="ai-aviation.html" aria-current="page">AI &amp; Aviation</a></li><li><a href="safety.html">Safety</a></li><li><a href="schools.html">For Schools</a></li><li><a href="about.html">About</a></li><li><a href="faq.html">FAQ</a></li>
       </ul>
+      <a class="btn btn--primary nav-cta" href="contact.html">Get in touch <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></a>
+      <div class="nav-quick">
+        <a href="tel:+916281843302"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg> Call +91 62818 43302</a>
+        <a href="https://wa.me/916281843302?text=Hi%20WingBound%2C%20I%27d%20like%20to%20know%20more%20about%20your%20workshops." target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 3C8.86 3 3.03 8.82 3.03 16c0 2.3.6 4.53 1.74 6.5L3 29l6.68-1.75A13 13 0 0 0 16.04 29C23.2 29 29 23.18 29 16S23.2 3 16.04 3Zm0 23.8c-2 0-3.94-.53-5.64-1.55l-.4-.24-3.97 1.04 1.06-3.86-.26-.4A10.77 10.77 0 0 1 5.24 16c0-5.95 4.85-10.8 10.8-10.8 5.94 0 10.77 4.85 10.77 10.8 0 5.96-4.83 10.8-10.77 10.8Zm5.92-8.08c-.33-.16-1.93-.95-2.23-1.06-.3-.11-.52-.16-.73.17-.22.32-.84 1.05-1.03 1.27-.19.22-.38.24-.7.08-.33-.16-1.38-.51-2.62-1.62-.97-.86-1.62-1.93-1.81-2.25-.19-.33-.02-.5.14-.66.15-.15.33-.38.49-.57.16-.19.22-.33.33-.54.11-.22.05-.41-.03-.57-.08-.16-.73-1.76-1-2.41-.26-.63-.53-.55-.73-.56h-.62c-.22 0-.57.08-.87.41-.3.32-1.14 1.11-1.14 2.71s1.17 3.15 1.33 3.36c.16.22 2.3 3.5 5.56 4.91.78.34 1.39.54 1.86.69.78.25 1.49.21 2.05.13.63-.09 1.93-.79 2.2-1.55.27-.76.27-1.42.19-1.55-.08-.14-.3-.22-.62-.38Z"/></svg> WhatsApp us</a>
+      </div>
     </nav>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
   </div>
   <div class="flight-progress" aria-hidden="true"><span class="fp-trail"></span><svg class="fp-plane" viewBox="-32 -32 64 64"><use href="#rc-plane"/></svg></div>
 </header>
 <main id="main">
 <section class="page-hero">
   <div class="glow" aria-hidden="true"></div>
-  <svg class="sky sky--page " viewBox="0 0 1200 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><path id="fp-page" d="M-60 250 C 220 290, 400 110, 640 150 S 1000 70, 1280 110" fill="none" stroke="none"/><path d="M-60 250 C 220 290, 400 110, 640 150 S 1000 70, 1280 110" class="sky-path" stroke-dasharray="2 10"/><path d="M-60 250 C 220 290, 400 110, 640 150 S 1000 70, 1280 110" class="sky-trail" pathLength="1" stroke-dasharray="1 1"><animate attributeName="stroke-dashoffset" values="1;0;0" keyTimes="0;0.7;1" dur="17s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;1;0" keyTimes="0;0.7;0.95" dur="17s" repeatCount="indefinite"/></path><g class="sky-plane"><use href="#rc-plane" x="-23.0" y="-23.0" width="46" height="46"/><animateMotion dur="17s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.7;1"><mpath href="#fp-page"/></animateMotion></g></svg>
+  <svg class="sky sky--page " viewBox="0 0 1200 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><path id="fp-page" d="M-60 250 C 220 290, 400 110, 640 150 S 1000 70, 1280 110" fill="none" stroke="none"/><path d="M-60 250 C 220 290, 400 110, 640 150 S 1000 70, 1280 110" class="sky-path" stroke-dasharray="2 10"/><path d="M-60 250 C 220 290, 400 110, 640 150 S 1000 70, 1280 110" class="sky-trail" pathLength="1" stroke-dasharray="1 1"><animate attributeName="stroke-dashoffset" values="1;0;0" keyTimes="0;0.7;1" dur="17s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;1;0" keyTimes="0;0.7;0.95" dur="17s" repeatCount="indefinite"/></path><g class="sky-plane"><use href="#rc-plane" x="-22.0" y="-22.0" width="44" height="44"/><animateMotion dur="17s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.7;1"><mpath href="#fp-page"/></animateMotion></g></svg>
   <div class="container">
-    <p class="breadcrumb"><a href="index.html">Home</a> / AI &amp; Aviation</p>
+    <p class="breadcrumb"><a href="index.html">Home</a> <span aria-hidden="true">/</span> AI &amp; Aviation</p>
     <span class="label">AI &amp; Aviation</span>
     <h1>AI is the co-pilot. You are the pilot.</h1>
-    <p>Students see how sensors, flight controllers and AI make aircraft smarter, and where drones already help people across India.</p>
-    
+    <p class="page-hero-sub">Students see how sensors, flight controllers and AI make aircraft smarter, and where drones already help people across India.</p>
+    <ul class="hud hud--page"><li><span class="hud-k">Module</span><span class="hud-v">06</span></li><li><span class="hud-k">Tools</span><span class="hud-v">Free &amp; open source</span></li><li><span class="hud-k">Runs in</span><span class="hud-v">ATL or computer lab</span></li><li><span class="hud-k">Ends with</span><span class="hud-v">A science-fair project</span></li></ul>
   </div>
 </section>
 
 
-<section class="section" aria-labelledby="sta-title">
-  <div class="container">
-    <div class="section-head center">
-      <span class="label">How a smart aircraft works</span>
-      <h2 id="sta-title">Sense → Think → Act</h2>
-      <p>Every smart aircraft runs the same loop, many times a second.</p>
+<section class="section section--white" aria-labelledby="sta-title">
+  <div class="container split">
+    <div>
+      <div class="section-head" data-reveal><span class="label">How a smart aircraft works</span><h2 id="sta-title">Sense. Think. Act.</h2><p>Every smart aircraft runs the same loop, over and over.</p></div>
+      <ol class="sta-steps">
+        <li data-reveal><span class="badge "><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19.07 4.93A10 10 0 0 0 6.99 3.34" /><path d="M4 6h.01" /><path d="M2.29 9.62A10 10 0 1 0 21.31 8.35" /><path d="M16.24 7.76A6 6 0 1 0 8.23 16.67" /><path d="M12 18h.01" /><path d="M17.99 11.66A6 6 0 0 1 15.77 16.67" /><circle cx="12" cy="12" r="2" /><path d="m13.41 10.59 5.66-5.66" /></svg></span><div><h3>Sense</h3><p>Sensors (gyro, accelerometer, GPS, barometer, camera) measure what the plane is doing.</p></div></li>
+        <li data-reveal><span class="badge "><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="16" height="16" x="4" y="4" rx="2" /><rect width="6" height="6" x="9" y="9" rx="1" /><path d="M15 2v2" /><path d="M15 20v2" /><path d="M2 15h2" /><path d="M2 9h2" /><path d="M20 15h2" /><path d="M20 9h2" /><path d="M9 2v2" /><path d="M9 20v2" /></svg></span><div><h3>Think</h3><p>A flight controller decides how to move the controls.</p></div></li>
+        <li data-reveal><span class="badge "><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z" /><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" /><path d="M12 2v2" /><path d="M12 22v-2" /><path d="m17 20.66-1-1.73" /><path d="M11 10.27 7 3.34" /><path d="m20.66 17-1.73-1" /><path d="m3.34 7 1.73 1" /><path d="M14 12h8" /><path d="M2 12h2" /><path d="m20.66 7-1.73 1" /><path d="m3.34 17 1.73-1" /><path d="m17 3.34-1 1.73" /><path d="m11 13.73-4 6.93" /></svg></span><div><h3>Act</h3><p>The same servos and ESC that students fit carry out each decision.</p></div></li>
+      </ol>
     </div>
-    <ol class="sta" role="list">
-      <li class="card"><span class="badge "><i data-lucide="radar" aria-hidden="true"></i></span><h3>Sense</h3><p>Sensors (gyro, accelerometer, GPS, barometer, camera) measure what the plane is doing.</p></li>
-      <li class="arrow" aria-hidden="true"><i data-lucide="arrow-right" aria-hidden="true"></i></li>
-      <li class="card"><span class="badge "><i data-lucide="cpu" aria-hidden="true"></i></span><h3>Think</h3><p>A flight controller decides how to move the controls.</p></li>
-      <li class="arrow" aria-hidden="true"><i data-lucide="arrow-right" aria-hidden="true"></i></li>
-      <li class="card"><span class="badge "><i data-lucide="cog" aria-hidden="true"></i></span><h3>Act</h3><p>The same servos and ESC that students fit carry out each decision.</p></li>
-    </ol>
-    <div class="callout callout--orange callout--row mt-2">
-      <span class="badge badge--solid"><i data-lucide="lightbulb" aria-hidden="true"></i></span>
-      <div>
-        <h3>Key point: autopilot is not the same as AI</h3>
-        <p>An autopilot follows rules we program. AI learns patterns from data.</p>
-      </div>
+    <div class="sta-loop" data-reveal>
+  <svg viewBox="0 0 520 460" role="img" aria-labelledby="sta-svg-title">
+    <title id="sta-svg-title">A loop: sense, then think, then act, then sense again</title>
+    <path id="sta-ring" d="M260 70 A170 170 0 1 1 259.9 70" class="sta-ring"/>
+    <circle r="7" class="sta-dot"><animateMotion dur="6s" repeatCount="indefinite"><mpath href="#sta-ring"/></animateMotion></circle>
+    <g class="sta-node"><circle cx="260" cy="70" r="58"/><text x="260" y="78" text-anchor="middle">SENSE</text></g>
+    <g class="sta-node"><circle cx="407" cy="325" r="58"/><text x="407" y="333" text-anchor="middle">THINK</text></g>
+    <g class="sta-node"><circle cx="113" cy="325" r="58"/><text x="113" y="333" text-anchor="middle">ACT</text></g>
+    <text x="260" y="236" text-anchor="middle" class="sta-c1">THE LOOP</text>
+    <text x="260" y="262" text-anchor="middle" class="sta-c2">many times a second</text>
+  </svg>
+</div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="vs-title">
+  <div class="container">
+    <div class="section-head center" data-reveal><span class="label">Key point</span><h2 id="vs-title">Autopilot is not the same as AI</h2></div>
+    <div class="versus" data-reveal>
+      <div class="vs-card"><span class="vs-k">Autopilot</span><p>Follows rules <strong>we program</strong>.</p></div>
+      <span class="vs-mid" aria-hidden="true">vs</span>
+      <div class="vs-card vs-card--ai"><span class="vs-k">AI</span><p>Learns patterns <strong>from data</strong>.</p></div>
     </div>
   </div>
 </section>
 
 <section class="section section--white" aria-labelledby="better-title">
   <div class="container">
-    <div class="section-head">
-      <span class="label">In the air</span>
-      <h2 id="better-title">How AI makes RC planes better</h2>
-    </div>
+    <div class="section-head" data-reveal><span class="label">In the air</span><h2 id="better-title">How AI makes RC planes better</h2></div>
     <div class="grid grid-3">
-      <article class="card"><span class="badge "><i data-lucide="scale" aria-hidden="true"></i></span><h3>Self-levelling</h3><p>The plane returns to level flight when the pilot lets go of the sticks.</p></article><article class="card"><span class="badge "><i data-lucide="sliders-horizontal" aria-hidden="true"></i></span><h3>Auto-tuning</h3><p>The flight controller adjusts its own settings for smoother control.</p></article><article class="card"><span class="badge "><i data-lucide="house" aria-hidden="true"></i></span><h3>Return to home</h3><p>With GPS, the aircraft can fly itself back if the radio signal is lost.</p></article><article class="card"><span class="badge "><i data-lucide="scan-eye" aria-hidden="true"></i></span><h3>Obstacle detection</h3><p>A camera and AI model spot obstacles in the flight path.</p></article><article class="card"><span class="badge "><i data-lucide="chart-line" aria-hidden="true"></i></span><h3>Predicting failures</h3><p>Patterns in flight logs warn of a weak battery or failing motor early.</p></article><article class="card"><span class="badge "><i data-lucide="drafting-compass" aria-hidden="true"></i></span><h3>Smarter design</h3><p>Simulation tests many wing and tail shapes before anything is built.</p></article>
+      <article class="card" data-reveal><span class="badge "><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" /><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" /><path d="M7 21h10" /><path d="M12 3v18" /><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2" /></svg></span><h3>Self-levelling</h3><p>The plane returns to level flight when the pilot lets go of the sticks.</p></article><article class="card" data-reveal><span class="badge "><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="21" x2="14" y1="4" y2="4" /><line x1="10" x2="3" y1="4" y2="4" /><line x1="21" x2="12" y1="12" y2="12" /><line x1="8" x2="3" y1="12" y2="12" /><line x1="21" x2="16" y1="20" y2="20" /><line x1="12" x2="3" y1="20" y2="20" /><line x1="14" x2="14" y1="2" y2="6" /><line x1="8" x2="8" y1="10" y2="14" /><line x1="16" x2="16" y1="18" y2="22" /></svg></span><h3>Auto-tuning</h3><p>The flight controller adjusts its own settings for smoother control.</p></article><article class="card" data-reveal><span class="badge "><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" /><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></svg></span><h3>Return to home</h3><p>With GPS, the aircraft can fly itself back if the radio signal is lost.</p></article><article class="card" data-reveal><span class="badge "><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 7V5a2 2 0 0 1 2-2h2" /><path d="M17 3h2a2 2 0 0 1 2 2v2" /><path d="M21 17v2a2 2 0 0 1-2 2h-2" /><path d="M7 21H5a2 2 0 0 1-2-2v-2" /><circle cx="12" cy="12" r="1" /><path d="M18.944 12.33a1 1 0 0 0 0-.66 7.5 7.5 0 0 0-13.888 0 1 1 0 0 0 0 .66 7.5 7.5 0 0 0 13.888 0" /></svg></span><h3>Obstacle detection</h3><p>A camera and AI model spot obstacles in the flight path.</p></article><article class="card" data-reveal><span class="badge "><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 3v16a2 2 0 0 0 2 2h16" /><path d="m19 9-5 5-4-4-3 3" /></svg></span><h3>Predicting failures</h3><p>Patterns in flight logs warn of a weak battery or failing motor early.</p></article><article class="card" data-reveal><span class="badge "><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12.99 6.74 1.93 3.44" /><path d="M19.136 12a10 10 0 0 1-14.271 0" /><path d="m21 21-2.16-3.84" /><path d="m3 21 8.02-14.26" /><circle cx="12" cy="5" r="2" /></svg></span><h3>Smarter design</h3><p>Simulation tests many wing and tail shapes before anything is built.</p></article>
     </div>
   </div>
 </section>
 
 <section class="section" aria-labelledby="help-title">
   <div class="container">
-    <div class="section-head">
-      <span class="label">On the ground</span>
-      <h2 id="help-title">Where AI and drones help people</h2>
-    </div>
+    <div class="section-head" data-reveal><span class="label">On the ground</span><h2 id="help-title">Where AI and drones help people</h2></div>
     <div class="grid grid-3">
-      <article class="card"><span class="badge "><i data-lucide="sprout" aria-hidden="true"></i></span><h3>Agriculture</h3><p>Spotting crop stress and spraying only where it is needed.</p></article><article class="card"><span class="badge "><i data-lucide="life-buoy" aria-hidden="true"></i></span><h3>Search &amp; rescue</h3><p>Searching large areas quickly after floods and disasters.</p></article><article class="card"><span class="badge "><i data-lucide="heart-pulse" aria-hidden="true"></i></span><h3>Medical delivery</h3><p>Carrying vaccines and medicines to hard-to-reach health centres.</p></article><article class="card"><span class="badge "><i data-lucide="building-2" aria-hidden="true"></i></span><h3>Infrastructure inspection</h3><p>Checking bridges, power lines and towers without risky climbs.</p></article><article class="card"><span class="badge "><i data-lucide="trees" aria-hidden="true"></i></span><h3>Environment &amp; wildlife</h3><p>Counting animals and mapping forests and coastlines.</p></article><article class="card"><span class="badge "><i data-lucide="plane" aria-hidden="true"></i></span><h3>Airline safety</h3><p>Analysing flight data to find risks before they cause problems.</p></article>
+      <article class="card card--flat" data-reveal><span class="badge "><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 20h10" /><path d="M10 20c5.5-2.5.8-6.4 3-10" /><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z" /><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z" /></svg></span><h3>Agriculture</h3><p>Spotting crop stress and spraying only where it is needed.</p></article><article class="card card--flat" data-reveal><span class="badge "><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10" /><path d="m4.93 4.93 4.24 4.24" /><path d="m14.83 9.17 4.24-4.24" /><path d="m14.83 14.83 4.24 4.24" /><path d="m9.17 14.83-4.24 4.24" /><circle cx="12" cy="12" r="4" /></svg></span><h3>Search &amp; rescue</h3><p>Searching large areas quickly after floods and disasters.</p></article><article class="card card--flat" data-reveal><span class="badge "><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" /><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27" /></svg></span><h3>Medical delivery</h3><p>Carrying vaccines and medicines to hard-to-reach health centres.</p></article><article class="card card--flat" data-reveal><span class="badge "><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" /><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" /><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" /><path d="M10 6h4" /><path d="M10 10h4" /><path d="M10 14h4" /><path d="M10 18h4" /></svg></span><h3>Infrastructure inspection</h3><p>Checking bridges, power lines and towers without risky climbs.</p></article><article class="card card--flat" data-reveal><span class="badge "><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 10v.2A3 3 0 0 1 8.9 16H5a3 3 0 0 1-1-5.8V10a3 3 0 0 1 6 0Z" /><path d="M7 16v6" /><path d="M13 19v3" /><path d="M12 19h8.3a1 1 0 0 0 .7-1.7L18 14h.3a1 1 0 0 0 .7-1.7L16 9h.2a1 1 0 0 0 .8-1.7L13 3l-1.4 1.5" /></svg></span><h3>Environment &amp; wildlife</h3><p>Counting animals and mapping forests and coastlines.</p></article><article class="card card--flat" data-reveal><span class="badge "><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z" /></svg></span><h3>Airline safety</h3><p>Analysing flight data to find risks before they cause problems.</p></article>
     </div>
-    <div class="callout mt-2">
-      <span class="label" style="margin:0">Close to home</span>
-      <h3>Medicine from the Sky, Telangana</h3>
-      <p>Telangana's "Medicine from the Sky" project began in Vikarabad in September 2021. The first drone carried 5 kg of vaccines to a health centre 3 km away in 10 minutes.</p>
-    </div>
+    <article class="feature" data-reveal>
+      <div class="feature-copy">
+        <span class="label">Close to home</span>
+        <h3>Medicine from the Sky, Telangana</h3>
+        <p>Telangana's "Medicine from the Sky" project began in Vikarabad in September 2021. The first drone carried vaccines to a health centre.</p>
+      </div>
+      <ul class="feature-stats">
+        <li><span class="big">5 kg</span><span>of vaccines</span></li>
+        <li><span class="big">3 km</span><span>to the health centre</span></li>
+        <li><span class="big">10 min</span><span>flight time</span></li>
+      </ul>
+    </article>
   </div>
 </section>
 
 <section class="section section--dark" aria-labelledby="copilot-title">
   <div class="glow" aria-hidden="true" style="left:30%;top:-30%"></div>
   <div class="container split">
-    <div>
+    <div data-reveal>
       <span class="label">Our message to students</span>
       <p class="quote" id="copilot-title"><span class="silver">AI is the co-pilot.</span><br><span class="orange-text">You are the pilot.</span></p>
       <p>AI can help, but the person flying is always responsible. We teach students to understand the technology and to use it with care.</p>
@@ -139,45 +151,43 @@
     <div class="showcase">
       <div class="glow" aria-hidden="true"></div>
       <picture>
-        <source type="image/webp" srcset="assets/img/plane-760.webp">
-        <img src="assets/img/plane-760.png" width="760" height="404" alt="" loading="lazy">
+        <source type="image/webp" srcset="assets/img/plane-760.webp 760w, assets/img/plane-1400.webp 1400w" sizes="(min-width: 960px) 560px, 92vw">
+        <img src="assets/img/plane-760.png" width="760" height="419" alt="" loading="lazy">
       </picture>
     </div>
   </div>
 </section>
 
-<section class="section" aria-labelledby="path-title">
+<section class="section section--white" aria-labelledby="path-title">
   <div class="container">
-    <div class="section-head">
-      <span class="label">After the workshop</span>
-      <h2 id="path-title">A student project path</h2>
-      <p>The workshop is the start. Students can take the next steps in your Atal Tinkering Lab or computer lab.</p>
-    </div>
-    <ol class="steps steps--4">
-      <li><h3>Fly the basic plane</h3><p>Start with the trainer built in the workshop.</p></li>
-      <li><h3>Add a flight controller</h3><p>Fit a controller running open-source ArduPilot or INAV, with GPS.</p></li>
-      <li><h3>Log flight data</h3><p>Record what the sensors measure on every flight.</p></li>
-      <li><h3>Train a simple model</h3><p>Find patterns in the data and present the project at a science fair.</p></li>
+    <div class="section-head" data-reveal><span class="label">After the workshop</span><h2 id="path-title">A student project path</h2><p>The workshop is the start. Students can take the next steps in your Atal Tinkering Lab or computer lab.</p></div>
+    <ol class="steps">
+      <li data-reveal><h3>Fly the basic plane</h3><p>Start with the trainer built in the workshop.</p></li>
+      <li data-reveal><h3>Add a flight controller</h3><p>Fit a controller running open-source ArduPilot or INAV, with GPS.</p></li>
+      <li data-reveal><h3>Log flight data</h3><p>Record what the sensors measure on every flight.</p></li>
+      <li data-reveal><h3>Train a simple model</h3><p>Find patterns in the data and present the project at a science fair.</p></li>
     </ol>
-    <h3 class="sub-head mt-3">Free tools to start with</h3>
-    <ul class="chip-list">
-      <li><a class="chip" href="https://ardupilot.org/" target="_blank" rel="noopener"><i data-lucide="external-link" aria-hidden="true"></i> ArduPilot</a></li>
-      <li><a class="chip" href="https://ardupilot.org/planner/" target="_blank" rel="noopener"><i data-lucide="external-link" aria-hidden="true"></i> Mission Planner</a></li>
-      <li><a class="chip" href="https://github.com/iNavFlight/inav" target="_blank" rel="noopener"><i data-lucide="external-link" aria-hidden="true"></i> INAV</a></li>
-      <li><a class="chip" href="https://teachablemachine.withgoogle.com/" target="_blank" rel="noopener"><i data-lucide="external-link" aria-hidden="true"></i> Google Teachable Machine</a></li>
-    </ul>
+    <div class="tools" data-reveal>
+      <h3>Free tools to start with</h3>
+      <ul>
+        <li><a href="https://ardupilot.org/" target="_blank" rel="noopener"><strong>ArduPilot</strong><span>Open-source autopilot</span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg></a></li>
+        <li><a href="https://ardupilot.org/planner/" target="_blank" rel="noopener"><strong>Mission Planner</strong><span>Ground station for ArduPilot</span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg></a></li>
+        <li><a href="https://github.com/iNavFlight/inav" target="_blank" rel="noopener"><strong>INAV</strong><span>Open-source flight controller firmware</span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg></a></li>
+        <li><a href="https://teachablemachine.withgoogle.com/" target="_blank" rel="noopener"><strong>Teachable Machine</strong><span>Train a simple model in the browser</span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg></a></li>
+      </ul>
+    </div>
   </div>
 </section>
 
 <section class="section section--dark cta-band" aria-labelledby="cta-title">
   <div class="glow" aria-hidden="true"></div>
-  <div class="container">
+  <div class="container" data-reveal>
     <span class="label">Ready for take-off?</span>
     <h2 id="cta-title">Bring AI and aviation to your lab</h2>
     <p>Start with the workshop. Leave with a project your students can grow in your Atal Tinkering Lab or computer lab.</p>
     <div class="btn-row">
-      <a class="btn btn--primary" href="book.html"><i data-lucide="calendar-check" aria-hidden="true"></i> Book a workshop</a>
-      <a class="btn btn--ghost" href="downloads/wingbound-proposal.pdf" download><i data-lucide="download" aria-hidden="true"></i> Download proposal (PDF)</a>
+      <a class="btn btn--primary btn--lg" href="contact.html">Get in touch <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></a>
+      <a class="btn btn--ghost" href="https://wa.me/916281843302?text=Hi%20WingBound%2C%20I%27d%20like%20to%20know%20more%20about%20your%20workshops." target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 3C8.86 3 3.03 8.82 3.03 16c0 2.3.6 4.53 1.74 6.5L3 29l6.68-1.75A13 13 0 0 0 16.04 29C23.2 29 29 23.18 29 16S23.2 3 16.04 3Zm0 23.8c-2 0-3.94-.53-5.64-1.55l-.4-.24-3.97 1.04 1.06-3.86-.26-.4A10.77 10.77 0 0 1 5.24 16c0-5.95 4.85-10.8 10.8-10.8 5.94 0 10.77 4.85 10.77 10.8 0 5.96-4.83 10.8-10.77 10.8Zm5.92-8.08c-.33-.16-1.93-.95-2.23-1.06-.3-.11-.52-.16-.73.17-.22.32-.84 1.05-1.03 1.27-.19.22-.38.24-.7.08-.33-.16-1.38-.51-2.62-1.62-.97-.86-1.62-1.93-1.81-2.25-.19-.33-.02-.5.14-.66.15-.15.33-.38.49-.57.16-.19.22-.33.33-.54.11-.22.05-.41-.03-.57-.08-.16-.73-1.76-1-2.41-.26-.63-.53-.55-.73-.56h-.62c-.22 0-.57.08-.87.41-.3.32-1.14 1.11-1.14 2.71s1.17 3.15 1.33 3.36c.16.22 2.3 3.5 5.56 4.91.78.34 1.39.54 1.86.69.78.25 1.49.21 2.05.13.63-.09 1.93-.79 2.2-1.55.27-.76.27-1.42.19-1.55-.08-.14-.3-.22-.62-.38Z"/></svg> WhatsApp us</a>
     </div>
   </div>
 </section>
@@ -185,16 +195,19 @@
 </main>
 <footer class="site-footer">
   <div class="container">
-    <div class="footer-grid">
-      <div>
+    <div class="footer-top">
+      <div class="footer-brand">
         <a class="brand" href="index.html" aria-label="WingBound home">
           <picture><source srcset="assets/img/logo-240.webp" type="image/webp"><img src="assets/img/logo-240.png" alt="" width="240" height="165" loading="lazy"></picture>
           <span class="brand-word">WINGBOUND</span>
         </a>
-        <p class="footer-tag">DESIGN. BUILD. FLY.</p>
-        <p>Hands-on RC aircraft and AI workshops for schools and colleges in Andhra Pradesh. Based in Visakhapatnam.</p>
+        <p>Hands-on RC aircraft and AI workshops for schools and colleges across Andhra Pradesh. Based in Visakhapatnam.</p>
+        <div class="btn-row">
+          <a class="btn btn--primary btn--sm" href="contact.html">Get in touch <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></a>
+          <a class="btn btn--ghost btn--sm" href="https://wa.me/916281843302?text=Hi%20WingBound%2C%20I%27d%20like%20to%20know%20more%20about%20your%20workshops." target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 3C8.86 3 3.03 8.82 3.03 16c0 2.3.6 4.53 1.74 6.5L3 29l6.68-1.75A13 13 0 0 0 16.04 29C23.2 29 29 23.18 29 16S23.2 3 16.04 3Zm0 23.8c-2 0-3.94-.53-5.64-1.55l-.4-.24-3.97 1.04 1.06-3.86-.26-.4A10.77 10.77 0 0 1 5.24 16c0-5.95 4.85-10.8 10.8-10.8 5.94 0 10.77 4.85 10.77 10.8 0 5.96-4.83 10.8-10.77 10.8Zm5.92-8.08c-.33-.16-1.93-.95-2.23-1.06-.3-.11-.52-.16-.73.17-.22.32-.84 1.05-1.03 1.27-.19.22-.38.24-.7.08-.33-.16-1.38-.51-2.62-1.62-.97-.86-1.62-1.93-1.81-2.25-.19-.33-.02-.5.14-.66.15-.15.33-.38.49-.57.16-.19.22-.33.33-.54.11-.22.05-.41-.03-.57-.08-.16-.73-1.76-1-2.41-.26-.63-.53-.55-.73-.56h-.62c-.22 0-.57.08-.87.41-.3.32-1.14 1.11-1.14 2.71s1.17 3.15 1.33 3.36c.16.22 2.3 3.5 5.56 4.91.78.34 1.39.54 1.86.69.78.25 1.49.21 2.05.13.63-.09 1.93-.79 2.2-1.55.27-.76.27-1.42.19-1.55-.08-.14-.3-.22-.62-.38Z"/></svg> WhatsApp</a>
+        </div>
       </div>
-      <nav aria-label="Footer: workshop">
+      <nav class="footer-col" aria-label="Footer: workshop">
         <h2>Workshop</h2>
         <ul>
           <li><a href="workshop.html">The Workshop</a></li>
@@ -203,33 +216,33 @@
           <li><a href="gallery.html">Gallery</a></li>
         </ul>
       </nav>
-      <nav aria-label="Footer: schools">
+      <nav class="footer-col" aria-label="Footer: schools">
         <h2>Schools</h2>
         <ul>
           <li><a href="schools.html">For Schools &amp; Colleges</a></li>
-          <li><a href="book.html">Book a workshop</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li><a href="about.html">About us</a></li>
-          <li><a href="downloads/wingbound-proposal.pdf" download>Proposal (PDF)</a></li>
-          <li><a href="downloads/wingbound-flyer.pdf" download>Flyer (PDF)</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          
         </ul>
       </nav>
-      <div>
-        <h2>Contact</h2>
-        <ul>
-          <li><strong style="color:#fff">Nikhil Kalyan</strong><br><a href="tel:+918332032455">+91 83320 32455</a><br><a href="mailto:writetonikhilkalyan@gmail.com">writetonikhilkalyan@gmail.com</a></li>
-          <li><strong style="color:#fff">Thoran Prakash</strong><br><a href="tel:+919581546640">+91 95815 46640</a><br><a href="mailto:thoranprakash23@gmail.com">thoranprakash23@gmail.com</a></li>
+      <div class="footer-col">
+        <h2>Talk to us</h2>
+        <ul class="footer-contacts">
+          <li><strong>Nikhil Kalyan</strong><a href="tel:+916281843302">+91 62818 43302</a><a href="mailto:writetonikhilkalyan@gmail.com">writetonikhilkalyan@gmail.com</a></li>
+          <li><strong>Thoran Prakash</strong><a href="tel:+919581546640">+91 95815 46640</a><a href="mailto:thoranprakash23@gmail.com">thoranprakash23@gmail.com</a></li>
         </ul>
       </div>
     </div>
+    <svg class="footer-mark" viewBox="0 0 1000 104" aria-hidden="true" focusable="false"><text x="2" y="96" textLength="996" lengthAdjust="spacingAndGlyphs">DESIGN. BUILD. FLY.</text></svg>
     <div class="footer-bottom">
       <p>Student photos are shared only with parental consent.</p>
-      <p>&copy; <span data-year>2026</span> WingBound, Visakhapatnam. All rights reserved.</p>
+      <p>&copy; <span data-year>2026</span> WingBound, Visakhapatnam</p>
     </div>
   </div>
 </footer>
-<a class="wa-float" href="https://wa.me/918332032455?text=Hi%20WingBound%2C%20I%27d%20like%20to%20know%20more%20about%20a%20workshop%20for%20our%20institution." target="_blank" rel="noopener" aria-label="Chat with WingBound on WhatsApp (opens in a new tab)">
-  <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 3C8.86 3 3.03 8.82 3.03 16c0 2.3.6 4.53 1.74 6.5L3 29l6.68-1.75A13 13 0 0 0 16.04 29C23.2 29 29 23.18 29 16S23.2 3 16.04 3Zm0 23.8c-2 0-3.94-.53-5.64-1.55l-.4-.24-3.97 1.04 1.06-3.86-.26-.4A10.77 10.77 0 0 1 5.24 16c0-5.95 4.85-10.8 10.8-10.8 5.94 0 10.77 4.85 10.77 10.8 0 5.96-4.83 10.8-10.77 10.8Zm5.92-8.08c-.33-.16-1.93-.95-2.23-1.06-.3-.11-.52-.16-.73.17-.22.32-.84 1.05-1.03 1.27-.19.22-.38.24-.7.08-.33-.16-1.38-.51-2.62-1.62-.97-.86-1.62-1.93-1.81-2.25-.19-.33-.02-.5.14-.66.15-.15.33-.38.49-.57.16-.19.22-.33.33-.54.11-.22.05-.41-.03-.57-.08-.16-.73-1.76-1-2.41-.26-.63-.53-.55-.73-.56h-.62c-.22 0-.57.08-.87.41-.3.32-1.14 1.11-1.14 2.71s1.17 3.15 1.33 3.36c.16.22 2.3 3.5 5.56 4.91.78.34 1.39.54 1.86.69.78.25 1.49.21 2.05.13.63-.09 1.93-.79 2.2-1.55.27-.76.27-1.42.19-1.55-.08-.14-.3-.22-.62-.38Z"/></svg><span>WhatsApp us</span>
-</a>
+<aside aria-label="Quick contact">
+  <a class="wa-float" href="https://wa.me/916281843302?text=Hi%20WingBound%2C%20I%27d%20like%20to%20know%20more%20about%20your%20workshops." target="_blank" rel="noopener" aria-label="Chat with WingBound on WhatsApp (opens in a new tab)"><svg class="icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 3C8.86 3 3.03 8.82 3.03 16c0 2.3.6 4.53 1.74 6.5L3 29l6.68-1.75A13 13 0 0 0 16.04 29C23.2 29 29 23.18 29 16S23.2 3 16.04 3Zm0 23.8c-2 0-3.94-.53-5.64-1.55l-.4-.24-3.97 1.04 1.06-3.86-.26-.4A10.77 10.77 0 0 1 5.24 16c0-5.95 4.85-10.8 10.8-10.8 5.94 0 10.77 4.85 10.77 10.8 0 5.96-4.83 10.8-10.77 10.8Zm5.92-8.08c-.33-.16-1.93-.95-2.23-1.06-.3-.11-.52-.16-.73.17-.22.32-.84 1.05-1.03 1.27-.19.22-.38.24-.7.08-.33-.16-1.38-.51-2.62-1.62-.97-.86-1.62-1.93-1.81-2.25-.19-.33-.02-.5.14-.66.15-.15.33-.38.49-.57.16-.19.22-.33.33-.54.11-.22.05-.41-.03-.57-.08-.16-.73-1.76-1-2.41-.26-.63-.53-.55-.73-.56h-.62c-.22 0-.57.08-.87.41-.3.32-1.14 1.11-1.14 2.71s1.17 3.15 1.33 3.36c.16.22 2.3 3.5 5.56 4.91.78.34 1.39.54 1.86.69.78.25 1.49.21 2.05.13.63-.09 1.93-.79 2.2-1.55.27-.76.27-1.42.19-1.55-.08-.14-.3-.22-.62-.38Z"/></svg><span>WhatsApp us</span></a>
+</aside>
 </body>
 </html>

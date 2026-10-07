@@ -1,8 +1,51 @@
 # WingBound website
 
-Static HTML/CSS/JS, with no build step. Upload this folder to any static host (Netlify, Vercel, GitHub Pages, cPanel).
+A static site (HTML, CSS and a little JavaScript), hosted free on GitHub Pages:
+https://thoranprakash.github.io/wingbound-site/
 
-To preview it locally:
+## Editing content
+
+All page text lives in one file: `src/build.py`. Edit it, then rebuild:
+
+```bash
+python3 src/build.py
+```
+
+This rewrites every `.html` page, `sitemap.xml` and `robots.txt`. It needs only Python 3 (no packages).
+Commit and push, and GitHub Pages republishes within about a minute.
+
+Don't edit the `.html` files directly: the next build will overwrite them.
+
+### Adding social proof
+
+Near the top of `src/build.py` are three lists. Only add real content you have permission to publish:
+
+```python
+NUMBERS = [("500+", "students taught")]
+COMPETITIONS = [("Event name", "Organised by …", "2023", "1st place")]
+QUOTES = [("Quote text", "Name", "Role", "Institution")]
+```
+
+While a list is empty, the site shows a dashed "To add" box in its place. To hide those boxes on the live site, set `SHOW_EMPTY_SLOTS = False`.
+
+### Adding icons
+
+Icons are [Lucide](https://lucide.dev/icons) line icons, inlined into the pages. To use a new one:
+
+```bash
+python3 src/fetch_icons.py icon-name
+```
+
+Then use `icon("icon-name")` in `src/build.py`.
+
+### Styles and scripts
+
+- `assets/css/styles.css`: all styles. Brand colours are tokens at the top.
+- `assets/js/main.js`: mobile menu, audience tabs, forces and wiring diagrams, scroll reveals, contact form.
+
+The build adds a version tag to these file links, so visitors always get the latest version after a change.
+
+## Previewing locally
 
 ```bash
 python3 -m http.server 8765
@@ -12,31 +55,34 @@ Then open http://localhost:8765
 
 ## Before launch
 
-1. **Contact form** (`book.html`): there's no form service. The form writes a message and opens the visitor's email app (to Nikhil, cc Thoran) or WhatsApp (+91 8332032455). There's nothing to set up.
-2. **Domain**: the site is temporarily hosted at https://thoranprakash.github.io/wingbound-site/. When the domain is ready, replace `https://thoranprakash.github.io/wingbound-site` with it in every `.html` file, `sitemap.xml` and `robots.txt`. It appears in the canonical, Open Graph and schema tags. In the repo's **Settings → Pages → Custom domain**, add the domain too.
-3. **Downloads**: add `downloads/wingbound-proposal.pdf` and `downloads/wingbound-flyer.pdf`. Every page links to the proposal.
-4. **Photos**: replace each dashed "Photo placeholder" box with an `<img>` that has alt text. Use only photos with parental consent.
-   - `workshop.html`: the foam-board trainer
-   - `safety.html`: flight-line photo
-   - `about.html`: team photo and four portraits
-   - `gallery.html`: nine shots
-5. **Team**: add names and roles for team members 3 and 4 in `about.html`.
-6. **Hero plane image**: the plane carries Hangar 9 "Extra" markings. Confirm you have the rights to use it, or swap in a photo of your own aircraft at `assets/img/plane-760.*` and `plane-1100.webp`.
-7. **Pricing**: the packages say "Contact us for pricing". To show fees, edit `schools.html`.
+1. **Social proof**: fill `NUMBERS`, `COMPETITIONS` and `QUOTES` (see above), or set `SHOW_EMPTY_SLOTS = False`.
+2. **Team**: add the name of team member 4, and roles for everyone if you want them (search `Team member 4` in `src/build.py`).
+3. **Downloads**: put `wingbound-proposal.pdf` and `wingbound-flyer.pdf` in `downloads/` and rebuild. Download buttons appear automatically once the files exist.
+4. **Photos**: the gallery shows a "Photos are on their way" panel. Use only photos with parental consent.
+5. **Hero plane image**: the plane carries Hangar 9 "Extra" markings. Confirm you have the rights to use it, or use a photo of your own aircraft. The cleaned, AI-upscaled master (2346 px, transparent) is `src/plane-master.png`. The site uses `assets/img/plane-760.webp`, `plane-1400.webp` and `plane-760.png`, exported from it. A replacement needs the same three files with a transparent background.
+6. **Domain**: when it's ready, change `SITE_URL` in `src/build.py`, rebuild, and add the domain under the repo's **Settings → Pages → Custom domain**.
 
-## Files
+## Contact form
 
-- `index.html`: home
-- `workshop.html`: the workshop
-- `ai-aviation.html`: AI & aviation
-- `safety.html`: safety
-- `schools.html`: for schools and colleges
-- `about.html`: about us
-- `gallery.html`: gallery
-- `book.html`: contact / show-interest form (email or WhatsApp)
-- `faq.html`: FAQ
-- `assets/css/styles.css`: all styles; brand colours are tokens at the top
-- `assets/js/main.js`: mobile menu, contact form, flying-plane animations, icons
-- `assets/img/`: logo, plane (PNG and WebP), favicons, social share image
+The form stores nothing. It writes a message and opens WhatsApp (+91 62818 43302) or the visitor's email app (to Nikhil, copied to Thoran). There's no form service to set up.
 
-The header and footer are repeated in each page. If you change a nav link or contact detail, update all nine files.
+## Pages
+
+| File | Page |
+| --- | --- |
+| `index.html` | Home |
+| `workshop.html` | The Workshop: outcomes, forces of flight, schedule, electronics, aircraft blueprint |
+| `ai-aviation.html` | AI & Aviation |
+| `safety.html` | Safety, with the flight-day layout |
+| `schools.html` | For Schools & Colleges: who provides what, booking, packages |
+| `about.html` | About us and the team |
+| `gallery.html` | Gallery (photos coming soon) |
+| `contact.html` | Contact / show interest |
+| `faq.html` | FAQ, grouped by topic |
+| `404.html` | Page not found |
+| `book.html` | Redirects old links to `contact.html` |
+
+## Credits
+
+- Fonts: Lato and Michroma (SIL Open Font Licence), self-hosted in `assets/fonts/`.
+- Icons: Lucide (ISC licence).

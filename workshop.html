@@ -13,16 +13,19 @@
 <meta property="og:description" content="A 2-day RC aircraft workshop for schools and colleges: flight basics, electronics, a team foam-board build and a live flight demo. A 1-day option is also available.">
 <meta property="og:url" content="https://thoranprakash.github.io/wingbound-site/workshop.html">
 <meta property="og:image" content="https://thoranprakash.github.io/wingbound-site/assets/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_IN">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon-64.png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&amp;family=Michroma&amp;display=swap">
-<link rel="stylesheet" href="assets/css/styles.css">
-<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js" defer></script>
-<script src="assets/js/main.js" defer></script>
+<link rel="preload" href="assets/fonts/lato-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/lato-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/styles.css?v=a92b5c36">
+<script>document.documentElement.classList.add("js")</script>
+<script src="assets/js/main.js?v=bbc280e7" defer></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Course", "name": "WingBound RC aircraft and AI workshop", "description": "A hands-on aeromodelling workshop run on school and college campuses. Students learn the forces of flight, electronics and design, build a foam-board RC trainer in teams, and watch it fly.", "provider": {"@type": "EducationalOrganization", "name": "WingBound", "url": "https://thoranprakash.github.io/wingbound-site/"}, "educationalLevel": "Class 8 through engineering and diploma", "teaches": ["Explain how an aeroplane flies: lift, weight, thrust, drag and the control surfaces", "Identify each electronic part and how they connect", "Cut and assemble a foam-board airframe from a scaled build plan", "Watch their team's aircraft fly, and try the controls on a trainer link under supervision", "Explain how AI makes aircraft smarter, and where AI-powered drones already help people"], "inLanguage": "en-IN", "hasCourseInstance": [{"@type": "CourseInstance", "courseMode": "Onsite", "name": "2-day build workshop", "location": {"@type": "Place", "name": "Your campus, Andhra Pradesh"}}, {"@type": "CourseInstance", "courseMode": "Onsite", "name": "1-day workshop", "location": {"@type": "Place", "name": "Your campus, Andhra Pradesh"}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thoranprakash.github.io/wingbound-site/"}, {"@type": "ListItem", "position": 2, "name": "The Workshop", "item": "https://thoranprakash.github.io/wingbound-site/workshop.html"}]}</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -37,180 +40,273 @@
   </symbol>
 </svg>
 <header class="site-header">
-  <div class="container">
+  <div class="header-inner">
     <a class="brand" href="index.html" aria-label="WingBound home">
       <picture><source srcset="assets/img/logo-240.webp" type="image/webp"><img src="assets/img/logo-240.png" alt="" width="240" height="165"></picture>
       <span class="brand-word">WINGBOUND</span>
     </a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
-      <i data-lucide="menu" class="icon-open" aria-hidden="true"></i><i data-lucide="x" class="icon-close" aria-hidden="true"></i>
-    </button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="workshop.html" aria-current="page">The Workshop</a></li>
-        <li><a href="ai-aviation.html">AI &amp; Aviation</a></li>
-        <li><a href="safety.html">Safety</a></li>
-        <li><a href="schools.html">For Schools</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li class="nav-cta"><a class="btn btn--primary" href="book.html">Book a workshop</a></li>
+      <ul class="nav-links">
+        <li><a href="workshop.html" aria-current="page">The Workshop</a></li><li><a href="ai-aviation.html">AI &amp; Aviation</a></li><li><a href="safety.html">Safety</a></li><li><a href="schools.html">For Schools</a></li><li><a href="about.html">About</a></li><li><a href="faq.html">FAQ</a></li>
       </ul>
+      <a class="btn btn--primary nav-cta" href="contact.html">Get in touch <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></a>
+      <div class="nav-quick">
+        <a href="tel:+916281843302"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg> Call +91 62818 43302</a>
+        <a href="https://wa.me/916281843302?text=Hi%20WingBound%2C%20I%27d%20like%20to%20know%20more%20about%20your%20workshops." target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 3C8.86 3 3.03 8.82 3.03 16c0 2.3.6 4.53 1.74 6.5L3 29l6.68-1.75A13 13 0 0 0 16.04 29C23.2 29 29 23.18 29 16S23.2 3 16.04 3Zm0 23.8c-2 0-3.94-.53-5.64-1.55l-.4-.24-3.97 1.04 1.06-3.86-.26-.4A10.77 10.77 0 0 1 5.24 16c0-5.95 4.85-10.8 10.8-10.8 5.94 0 10.77 4.85 10.77 10.8 0 5.96-4.83 10.8-10.77 10.8Zm5.92-8.08c-.33-.16-1.93-.95-2.23-1.06-.3-.11-.52-.16-.73.17-.22.32-.84 1.05-1.03 1.27-.19.22-.38.24-.7.08-.33-.16-1.38-.51-2.62-1.62-.97-.86-1.62-1.93-1.81-2.25-.19-.33-.02-.5.14-.66.15-.15.33-.38.49-.57.16-.19.22-.33.33-.54.11-.22.05-.41-.03-.57-.08-.16-.73-1.76-1-2.41-.26-.63-.53-.55-.73-.56h-.62c-.22 0-.57.08-.87.41-.3.32-1.14 1.11-1.14 2.71s1.17 3.15 1.33 3.36c.16.22 2.3 3.5 5.56 4.91.78.34 1.39.54 1.86.69.78.25 1.49.21 2.05.13.63-.09 1.93-.79 2.2-1.55.27-.76.27-1.42.19-1.55-.08-.14-.3-.22-.62-.38Z"/></svg> WhatsApp us</a>
+      </div>
     </nav>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
   </div>
   <div class="flight-progress" aria-hidden="true"><span class="fp-trail"></span><svg class="fp-plane" viewBox="-32 -32 64 64"><use href="#rc-plane"/></svg></div>
 </header>
 <main id="main">
 <section class="page-hero">
   <div class="glow" aria-hidden="true"></div>
-  <svg class="sky sky--page " viewBox="0 0 1200 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><path id="fp-page" d="M-60 250 C 220 290, 400 110, 640 150 S 1000 70, 1280 110" fill="none" stroke="none"/><path d="M-60 250 C 220 290, 400 110, 640 150 S 1000 70, 1280 110" class="sky-path" stroke-dasharray="2 10"/><path d="M-60 250 C 220 290, 400 110, 640 150 S 1000 70, 1280 110" class="sky-trail" pathLength="1" stroke-dasharray="1 1"><animate attributeName="stroke-dashoffset" values="1;0;0" keyTimes="0;0.7;1" dur="17s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;1;0" keyTimes="0;0.7;0.95" dur="17s" repeatCount="indefinite"/></path><g class="sky-plane"><use href="#rc-plane" x="-23.0" y="-23.0" width="46" height="46"/><animateMotion dur="17s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.7;1"><mpath href="#fp-page"/></animateMotion></g></svg>
+  <svg class="sky sky--page " viewBox="0 0 1200 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><path id="fp-page" d="M-60 250 C 220 290, 400 110, 640 150 S 1000 70, 1280 110" fill="none" stroke="none"/><path d="M-60 250 C 220 290, 400 110, 640 150 S 1000 70, 1280 110" class="sky-path" stroke-dasharray="2 10"/><path d="M-60 250 C 220 290, 400 110, 640 150 S 1000 70, 1280 110" class="sky-trail" pathLength="1" stroke-dasharray="1 1"><animate attributeName="stroke-dashoffset" values="1;0;0" keyTimes="0;0.7;1" dur="17s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;1;0" keyTimes="0;0.7;0.95" dur="17s" repeatCount="indefinite"/></path><g class="sky-plane"><use href="#rc-plane" x="-22.0" y="-22.0" width="44" height="44"/><animateMotion dur="17s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.7;1"><mpath href="#fp-page"/></animateMotion></g></svg>
   <div class="container">
-    <p class="breadcrumb"><a href="index.html">Home</a> / The Workshop</p>
+    <p class="breadcrumb"><a href="index.html">Home</a> <span aria-hidden="true">/</span> The Workshop</p>
     <span class="label">The Workshop</span>
     <h1>Two days from theory to take-off</h1>
-    <p>Students learn how aeroplanes fly, build a real RC aircraft in teams, and watch it fly on their own campus.</p>
-    
+    <p class="page-hero-sub">Students learn how aeroplanes fly, build a real RC aircraft in teams, and watch it fly on their own campus.</p>
+    <ul class="hud hud--page"><li><span class="hud-k">Duration</span><span class="hud-v">2 days</span></li><li><span class="hud-k">Teams</span><span class="hud-v">4–5 students</span></li><li><span class="hud-k">Ratio</span><span class="hud-v">1 : 12</span></li><li><span class="hud-k">Every student</span><span class="hud-v">Certificate</span></li></ul>
   </div>
 </section>
 
 
-<section class="section" aria-labelledby="outcomes-title">
+<section class="section section--white" aria-labelledby="outcomes-title">
   <div class="container split split--top">
     <div>
-      <span class="label">Learning outcomes</span>
-      <h2 id="outcomes-title">By the end, every student can…</h2>
-      <ul class="check-list mt-1">
-        <li><i data-lucide="circle-check" aria-hidden="true"></i><span>Explain how an aeroplane flies: lift, weight, thrust, drag and the control surfaces</span></li>
-        <li><i data-lucide="circle-check" aria-hidden="true"></i><span>Identify each electronic part and how they connect</span></li>
-        <li><i data-lucide="circle-check" aria-hidden="true"></i><span>Cut and assemble a foam-board airframe from a scaled build plan</span></li>
-        <li><i data-lucide="circle-check" aria-hidden="true"></i><span>Watch their team's aircraft fly, and try the controls on a trainer link under supervision</span></li>
-        <li><i data-lucide="circle-check" aria-hidden="true"></i><span>Explain how AI makes aircraft smarter, and where AI-powered drones already help people</span></li>
-      </ul>
+      <div class="section-head" data-reveal><span class="label">Learning outcomes</span><h2 id="outcomes-title">By the end, every student can…</h2></div>
+      <ol class="outcomes">
+        <li data-reveal><span class="oc-n">1</span><span>Explain how an aeroplane flies: lift, weight, thrust, drag and the control surfaces</span></li><li data-reveal><span class="oc-n">2</span><span>Identify each electronic part and how they connect</span></li><li data-reveal><span class="oc-n">3</span><span>Cut and assemble a foam-board airframe from a scaled build plan</span></li><li data-reveal><span class="oc-n">4</span><span>Watch their team's aircraft fly, and try the controls on a trainer link under supervision</span></li><li data-reveal><span class="oc-n">5</span><span>Explain how AI makes aircraft smarter, and where AI-powered drones already help people</span></li>
+      </ol>
     </div>
-    <div class="card">
+    <div class="card card--tint" data-reveal>
       <h3>Linked to the curriculum</h3>
-      <p>The workshop maps to four subjects students already study:</p>
-      <ul class="chip-list mt-1">
-        <li class="chip"><i data-lucide="atom" aria-hidden="true"></i> Physics</li>
-        <li class="chip"><i data-lucide="sigma" aria-hidden="true"></i> Mathematics</li>
-        <li class="chip"><i data-lucide="pencil-ruler" aria-hidden="true"></i> Design &amp; technology</li>
-        <li class="chip"><i data-lucide="brain-circuit" aria-hidden="true"></i> Computer science (AI)</li>
+      <p>The workshop maps to four subjects students already study.</p>
+      <ul class="subject-grid">
+        <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="1" /><path d="M20.2 20.2c2.04-2.03.02-7.36-4.5-11.9-4.54-4.52-9.87-6.54-11.9-4.5-2.04 2.03-.02 7.36 4.5 11.9 4.54 4.52 9.87 6.54 11.9 4.5Z" /><path d="M15.7 15.7c4.52-4.54 6.54-9.87 4.5-11.9-2.03-2.04-7.36-.02-11.9 4.5-4.52 4.54-6.54 9.87-4.5 11.9 2.03 2.04 7.36.02 11.9-4.5Z" /></svg><span>Physics</span></li>
+        <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 7V5a1 1 0 0 0-1-1H6.5a.5.5 0 0 0-.4.8l4.5 6a2 2 0 0 1 0 2.4l-4.5 6a.5.5 0 0 0 .4.8H17a1 1 0 0 0 1-1v-2" /></svg><span>Mathematics</span></li>
+        <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 7 8.7 2.7a2.41 2.41 0 0 0-3.4 0L2.7 5.3a2.41 2.41 0 0 0 0 3.4L7 13" /><path d="m8 6 2-2" /><path d="m18 16 2-2" /><path d="m17 11 4.3 4.3c.94.94.94 2.46 0 3.4l-2.6 2.6c-.94.94-2.46.94-3.4 0L11 17" /><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" /><path d="m15 5 4 4" /></svg><span>Design &amp; technology</span></li>
+        <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" /><path d="M9 13a4.5 4.5 0 0 0 3-4" /><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5" /><path d="M3.477 10.896a4 4 0 0 1 .585-.396" /><path d="M6 18a4 4 0 0 1-1.967-.516" /><path d="M12 13h4" /><path d="M12 18h6a2 2 0 0 1 2 2v1" /><path d="M12 8h8" /><path d="M16 8V5a2 2 0 0 1 2-2" /><circle cx="16" cy="13" r=".5" /><circle cx="18" cy="3" r=".5" /><circle cx="20" cy="21" r=".5" /><circle cx="20" cy="8" r=".5" /></svg><span>Computer science (AI)</span></li>
       </ul>
     </div>
   </div>
 </section>
 
-<section class="section section--white" aria-labelledby="schedule-title">
+<section class="section" aria-labelledby="forces-title">
   <div class="container">
-    <div class="section-head">
-      <span class="label">2-day schedule</span>
-      <h2 id="schedule-title">The full programme</h2>
-      <p>Day 1 builds understanding and starts fabrication. Day 2 finishes the build and ends with a flight demo.</p>
+    <div class="section-head" data-reveal><span class="label">A taste of Module 01</span><h2 id="forces-title">Four forces, one aeroplane</h2><p>Tap each force to see what it does. Students learn these first, then feel them at work on flight day.</p></div>
+    <div data-reveal><div class="forces" data-forces>
+  <div class="forces-art">
+    <svg viewBox="0 0 600 340" role="img" aria-labelledby="fo-title">
+      <title id="fo-title">Side view of an aeroplane with the four forces of flight: lift up, weight down, thrust forward and drag backward</title>
+      <defs>
+        <marker id="fo-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="context-stroke"/></marker>
+      </defs>
+      <g class="fo-plane">
+        <path d="M190 178 Q186 168 200 166 L392 162 Q422 162 430 172 Q422 182 392 182 L200 184 Q186 186 190 178 Z"/>
+        <path d="M238 156 Q250 148 300 150 L322 152 Q326 157 320 160 L240 161 Z"/>
+        <path d="M196 166 L184 128 L200 128 L222 165 Z"/>
+        <path d="M188 177 L236 176 L236 182 L190 183 Z" opacity=".7"/>
+        <rect x="432" y="146" width="4" height="52" rx="2" opacity=".75"/>
+      </g>
+      <g class="fo-force" data-force="lift"><line x1="285" y1="140" x2="285" y2="46"/><text x="300" y="98">LIFT</text></g>
+      <g class="fo-force" data-force="weight"><line x1="285" y1="196" x2="285" y2="292"/><text x="300" y="256">WEIGHT</text></g>
+      <g class="fo-force" data-force="thrust"><line x1="446" y1="172" x2="560" y2="172"/><text x="486" y="160">THRUST</text></g>
+      <g class="fo-force" data-force="drag"><line x1="176" y1="172" x2="56" y2="172"/><text x="62" y="160">DRAG</text></g>
+    </svg>
+  </div>
+  <div class="forces-copy">
+    <div class="forces-tabs" role="group" aria-label="Choose a force">
+      <button type="button" class="force-btn" data-force="lift" aria-pressed="true"><span class="dot dot--lift"></span>Lift</button>
+      <button type="button" class="force-btn" data-force="weight" aria-pressed="false"><span class="dot dot--weight"></span>Weight</button>
+      <button type="button" class="force-btn" data-force="thrust" aria-pressed="false"><span class="dot dot--thrust"></span>Thrust</button>
+      <button type="button" class="force-btn" data-force="drag" aria-pressed="false"><span class="dot dot--drag"></span>Drag</button>
     </div>
-    <div class="grid" style="gap:24px">
-      <div class="table-wrap">
-  <table>
-    <caption>Day 1 <span>· about 5½ hours of sessions</span></caption>
-    <thead><tr><th scope="col">Session</th><th scope="col">What happens</th><th scope="col">Time</th></tr></thead>
-    <tbody><tr><th scope="row">Flight basics</th><td class="desc">Forces of flight, lift, airfoils, types of RC planes</td><td class="time">1 hr</td></tr><tr><th scope="row">Anatomy &amp; control</th><td class="desc">Aircraft parts, control surfaces, stability</td><td class="time">45 min</td></tr><tr><th scope="row">Electronics &amp; power</th><td class="desc">Motor, ESC, servos, LiPo battery, radio</td><td class="time">1 hr 15 min</td></tr><tr><th scope="row">Materials &amp; design</th><td class="desc">Build materials and sizing a trainer aircraft</td><td class="time">1 hr</td></tr><tr><th scope="row">Fabrication I</th><td class="desc">Mark and cut parts</td><td class="time">1 hr 30 min</td></tr></tbody>
-  </table>
-</div>
-      <div class="table-wrap">
-  <table>
-    <caption>Day 2 <span>· about 6 hours of sessions</span></caption>
-    <thead><tr><th scope="col">Session</th><th scope="col">What happens</th><th scope="col">Time</th></tr></thead>
-    <tbody><tr><th scope="row">Fabrication II</th><td class="desc">Assemble the airframe</td><td class="time">2 hr 30 min</td></tr><tr><th scope="row">Electronics integration</th><td class="desc">Fit motor, ESC, servos and linkages; bind the radio</td><td class="time">1 hr 30 min</td></tr><tr><th scope="row">Pre-flight checks</th><td class="desc">Centre of gravity, control directions, battery checks</td><td class="time">30 min</td></tr><tr><th scope="row">Flight demo &amp; closing</th><td class="desc">Supervised flight, Q&amp;A, certificates</td><td class="time">1 hr 30 min</td></tr></tbody>
-  </table>
-</div>
+    <div class="force-text" aria-live="polite">
+      <p data-force="lift"><strong>Lift</strong> holds the aeroplane up. The wing's airfoil shape and angle turn the passing air downwards, and the air pushes the wing up in return.</p>
+      <p data-force="weight" hidden><strong>Weight</strong> is gravity pulling the whole aircraft down. Our trainer weighs about 800 g, so its wing must make at least that much lift to stay up.</p>
+      <p data-force="thrust" hidden><strong>Thrust</strong> moves the aeroplane forward. The brushless motor spins the 10 × 4.5 propeller, which pulls the aircraft through the air.</p>
+      <p data-force="drag" hidden><strong>Drag</strong> is the air resisting the aeroplane's motion. Smooth, light shapes keep drag low.</p>
     </div>
-    <div class="callout callout--orange callout--row mt-2">
-      <span class="badge badge--solid"><i data-lucide="clock" aria-hidden="true"></i></span>
+    <p class="forces-note"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" /><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" /><path d="M7 21h10" /><path d="M12 3v18" /><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2" /></svg> In steady, level flight, lift balances weight and thrust balances drag.</p>
+  </div>
+</div></div>
+  </div>
+</section>
+
+<section class="section section--white" id="schedule" aria-labelledby="schedule-title">
+  <div class="container">
+    <div class="section-head" data-reveal><span class="label">2-day schedule</span><h2 id="schedule-title">The full programme</h2><p>Day 1 builds understanding and starts fabrication. Day 2 finishes the build and ends with a flight demo.</p></div>
+    <ul class="phase-legend" aria-label="Stages">
+      <li><span class="tl-dot tl-dot--design"></span>Design</li>
+      <li><span class="tl-dot tl-dot--build"></span>Build</li>
+      <li><span class="tl-dot tl-dot--fly"></span>Fly</li>
+    </ul>
+    <div class="tl-grid">
+      <article class="tl" data-reveal>
+  <header class="tl-head"><h3>Day 1</h3><span>about 5½ hours</span></header>
+  <div class="tl-bar" aria-hidden="true"><span class="tl-seg tl-seg--design" style="flex-grow:60" title="Flight basics: 1 hr"></span><span class="tl-seg tl-seg--design" style="flex-grow:45" title="Anatomy &amp; control: 45 min"></span><span class="tl-seg tl-seg--design" style="flex-grow:75" title="Electronics &amp; power: 1 hr 15 min"></span><span class="tl-seg tl-seg--design" style="flex-grow:60" title="Materials &amp; design: 1 hr"></span><span class="tl-seg tl-seg--build" style="flex-grow:90" title="Fabrication I: 1 hr 30 min"></span></div>
+  <ol class="tl-list"><li class="tl-row"><span class="tl-dot tl-dot--design" aria-hidden="true"></span><div><strong>Flight basics</strong><span>Forces of flight, lift, airfoils, types of RC planes</span></div><span class="tl-time">1 hr</span></li><li class="tl-row"><span class="tl-dot tl-dot--design" aria-hidden="true"></span><div><strong>Anatomy &amp; control</strong><span>Aircraft parts, control surfaces, stability</span></div><span class="tl-time">45 min</span></li><li class="tl-row"><span class="tl-dot tl-dot--design" aria-hidden="true"></span><div><strong>Electronics &amp; power</strong><span>Motor, ESC, servos, LiPo battery, radio</span></div><span class="tl-time">1 hr 15 min</span></li><li class="tl-row"><span class="tl-dot tl-dot--design" aria-hidden="true"></span><div><strong>Materials &amp; design</strong><span>Build materials and sizing a trainer aircraft</span></div><span class="tl-time">1 hr</span></li><li class="tl-row"><span class="tl-dot tl-dot--build" aria-hidden="true"></span><div><strong>Fabrication I</strong><span>Mark and cut parts</span></div><span class="tl-time">1 hr 30 min</span></li></ol>
+</article>
+      <article class="tl" data-reveal>
+  <header class="tl-head"><h3>Day 2</h3><span>about 6 hours</span></header>
+  <div class="tl-bar" aria-hidden="true"><span class="tl-seg tl-seg--build" style="flex-grow:150" title="Fabrication II: 2 hr 30 min"></span><span class="tl-seg tl-seg--build" style="flex-grow:90" title="Electronics integration: 1 hr 30 min"></span><span class="tl-seg tl-seg--fly" style="flex-grow:30" title="Pre-flight checks: 30 min"></span><span class="tl-seg tl-seg--fly" style="flex-grow:90" title="Flight demo &amp; closing: 1 hr 30 min"></span></div>
+  <ol class="tl-list"><li class="tl-row"><span class="tl-dot tl-dot--build" aria-hidden="true"></span><div><strong>Fabrication II</strong><span>Assemble the airframe</span></div><span class="tl-time">2 hr 30 min</span></li><li class="tl-row"><span class="tl-dot tl-dot--build" aria-hidden="true"></span><div><strong>Electronics integration</strong><span>Fit motor, ESC, servos and linkages; bind the radio</span></div><span class="tl-time">1 hr 30 min</span></li><li class="tl-row"><span class="tl-dot tl-dot--fly" aria-hidden="true"></span><div><strong>Pre-flight checks</strong><span>Centre of gravity, control directions, battery checks</span></div><span class="tl-time">30 min</span></li><li class="tl-row"><span class="tl-dot tl-dot--fly" aria-hidden="true"></span><div><strong>Flight demo &amp; closing</strong><span>Supervised flight, Q&amp;A, certificates</span></div><span class="tl-time">1 hr 30 min</span></li></ol>
+</article>
+    </div>
+    <div class="callout callout--orange mt-2" data-reveal>
+      <span class="badge badge--solid"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg></span>
       <div>
         <h3>Short on time? Choose the 1-day version</h3>
-        <p>Theory, a live build demo and a flight demo, without student fabrication. It suits busy terms and larger groups.</p>
+        <p>Theory, a live build demo and a flight demo, without student fabrication.</p>
       </div>
+      <a class="btn btn--outline" href="contact.html?package=1day">Ask about 1-day</a>
     </div>
   </div>
 </section>
 
-<section class="section" aria-labelledby="gets-title">
-  <div class="container">
-    <div class="section-head">
-      <span class="label">What students get</span>
-      <h2 id="gets-title">Skills they can see, touch and fly</h2>
-    </div>
-    <div class="grid grid-4">
-      <div class="card"><span class="badge "><i data-lucide="calculator" aria-hidden="true"></i></span><h3>Design and calculate their own trainer</h3></div><div class="card"><span class="badge "><i data-lucide="wind" aria-hidden="true"></i></span><h3>Aerodynamics</h3></div><div class="card"><span class="badge "><i data-lucide="radio" aria-hidden="true"></i></span><h3>Avionics</h3></div><div class="card"><span class="badge "><i data-lucide="battery-charging" aria-hidden="true"></i></span><h3>Power systems</h3></div><div class="card"><span class="badge "><i data-lucide="users" aria-hidden="true"></i></span><h3>Hands-on team build, all tools provided</h3></div><div class="card"><span class="badge "><i data-lucide="plane-takeoff" aria-hidden="true"></i></span><h3>Live flight demo on campus</h3></div><div class="card"><span class="badge "><i data-lucide="brain-circuit" aria-hidden="true"></i></span><h3>AI in aviation</h3></div><div class="card"><span class="badge "><i data-lucide="award" aria-hidden="true"></i></span><h3>Certificate for every participant</h3></div>
-    </div>
-  </div>
-</section>
-
-<section class="section section--dark" aria-labelledby="aircraft-title">
+<section class="section section--dark" aria-labelledby="wiring-title">
   <div class="glow" aria-hidden="true" style="right:-25%;top:-10%"></div>
   <div class="container">
-    <div class="section-head">
-      <span class="label">The aircraft</span>
-      <h2 id="aircraft-title">A real trainer, built by students</h2>
-      <p>Each team builds a foam-board trainer from a scaled build plan.</p>
-    </div>
-    <div class="split split--top">
-      <div class="placeholder placeholder--wide" role="img" aria-label="Photo placeholder: The WingBound foam-board trainer students build">
-  <div><i data-lucide="plane" aria-hidden="true"></i><strong>Photo placeholder</strong>The WingBound foam-board trainer students build</div>
-</div>
-      <div class="grid">
-        <div class="table-wrap spec-table">
-          <table>
-            <caption>Size</caption>
-            <tbody>
-              <tr><th scope="row">Wing span</th><td>108 cm</td></tr>
-              <tr><th scope="row">Chord</th><td>17 cm</td></tr>
-              <tr><th scope="row">Fuselage</th><td>75 cm</td></tr>
-              <tr><th scope="row">Horizontal stabiliser</th><td>30 cm</td></tr>
-              <tr><th scope="row">Vertical stabiliser</th><td>20 cm</td></tr>
-              <tr><th scope="row">Weight</th><td>About 800 g</td></tr>
-            </tbody>
-          </table>
+    <div class="section-head" data-reveal><span class="label">Module 03 · Electronics &amp; power</span><h2 id="wiring-title">How the parts connect</h2><p>Select a part to see what it does and where it plugs in. Students fit every one of these on Day 2.</p></div>
+    <div data-reveal><div class="wiring" data-wiring>
+  <div class="wiring-art" data-active=""><svg viewBox="0 0 680 400" role="img" aria-labelledby="wd-title">
+  <title id="wd-title">How the aircraft's electronics connect: the battery powers the ESC, which drives the motor; the transmitter talks to the receiver by radio, and the receiver controls the ESC and four servos</title>
+  <g class="wd-links">
+    <path class="wd-radio" data-parts="tx rx" d="M182 85 H258"/>
+    <path class="wd-sig" data-parts="rx servo" d="M422 85 H498"/>
+    <path class="wd-sig" data-parts="rx esc" d="M340 125 V275"/>
+    <path class="wd-pow" data-parts="batt esc" d="M182 315 H258"/>
+    <path class="wd-pow" data-parts="esc motor" d="M422 315 H498"/>
+  </g>
+  <g class="wd-waves" data-parts="tx rx" aria-hidden="true"><path d="M204 70 q8 15 0 30 M216 64 q12 21 0 42 M228 58 q16 27 0 54"/></g>
+  <g class="wd-node" data-parts="tx"><rect x="20" y="45" width="162" height="80" rx="14"/><text x="101.0" y="81.0" text-anchor="middle" class="wd-title">Transmitter</text><text x="101.0" y="105.0" text-anchor="middle" class="wd-sub">FlySky FS-i6</text></g>
+  <g class="wd-node" data-parts="rx"><rect x="258" y="45" width="164" height="80" rx="14"/><text x="340.0" y="81.0" text-anchor="middle" class="wd-title">Receiver</text><text x="340.0" y="105.0" text-anchor="middle" class="wd-sub">6 channels</text></g>
+  <g class="wd-node" data-parts="servo"><rect x="498" y="45" width="162" height="80" rx="14"/><text x="579.0" y="81.0" text-anchor="middle" class="wd-title">Servos</text><text x="579.0" y="105.0" text-anchor="middle" class="wd-sub">4 × SG90</text></g>
+  <g class="wd-node" data-parts="batt"><rect x="20" y="275" width="162" height="80" rx="14"/><text x="101.0" y="311.0" text-anchor="middle" class="wd-title">Battery</text><text x="101.0" y="335.0" text-anchor="middle" class="wd-sub">3S 3300 mAh</text></g>
+  <g class="wd-node" data-parts="esc"><rect x="258" y="275" width="164" height="80" rx="14"/><text x="340.0" y="311.0" text-anchor="middle" class="wd-title">ESC</text><text x="340.0" y="335.0" text-anchor="middle" class="wd-sub">30 A</text></g>
+  <g class="wd-node" data-parts="motor"><rect x="498" y="275" width="162" height="80" rx="14"/><text x="579.0" y="311.0" text-anchor="middle" class="wd-title">Motor</text><text x="579.0" y="335.0" text-anchor="middle" class="wd-sub">A2212 1000KV</text></g>
+  <text x="348" y="205" class="wd-lbl">THROTTLE</text>
+</svg>
+    <ul class="wd-legend" aria-label="Legend"><li><span class="lg lg--pow"></span>Power</li><li><span class="lg lg--sig"></span>Signal</li><li><span class="lg lg--radio"></span>Radio</li></ul>
+  </div>
+  <ul class="parts"><li><button type="button" class="part-btn" data-part="tx" aria-pressed="false"><strong>Transmitter</strong><span>FlySky FS-i6, 6-channel radio. The pilot's sticks send commands by radio.</span></button></li><li><button type="button" class="part-btn" data-part="rx" aria-pressed="false"><strong>Receiver</strong><span>Picks up the radio signal and passes each channel to the ESC and servos.</span></button></li><li><button type="button" class="part-btn" data-part="servo" aria-pressed="false"><strong>4 × SG90 servos</strong><span>Micro servos that move the control surfaces through linkages.</span></button></li><li><button type="button" class="part-btn" data-part="batt" aria-pressed="false"><strong>LiPo battery</strong><span>3S 11.1 V, 3300 mAh. Stores the energy for the motor. Charged only by instructors.</span></button></li><li><button type="button" class="part-btn" data-part="esc" aria-pressed="false"><strong>30A ESC</strong><span>Electronic speed controller. Sets the motor's speed from the throttle signal.</span></button></li><li><button type="button" class="part-btn" data-part="motor" aria-pressed="false"><strong>Brushless motor</strong><span>A2212 1000KV. Spins the 10 × 4.5 propeller to make thrust.</span></button></li></ul>
+</div></div>
+  </div>
+</section>
+
+<section class="section section--blueprint" id="aircraft" aria-labelledby="aircraft-title">
+  <div class="container">
+    <div class="section-head" data-reveal><span class="label">The aircraft</span><h2 id="aircraft-title">A real trainer, built by students</h2><p>Each team builds a foam-board trainer from a scaled build plan.</p></div>
+    <div class="aircraft">
+      <div class="aircraft-col aircraft-col--art">
+        <div class="ac-bp" data-reveal><figure class="blueprint" data-draw>
+  <svg viewBox="0 0 760 560" role="img" aria-labelledby="bp-title bp-desc">
+    <title id="bp-title">Top-view drawing of the WingBound trainer aircraft</title>
+    <desc id="bp-desc">Wing span 108 cm, wing chord 17 cm, fuselage 75 cm, horizontal stabiliser 30 cm, vertical stabiliser 20 cm, 10 by 4.5 inch propeller.</desc>
+    <defs>
+      <pattern id="bp-grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="rgba(255,255,255,.06)" stroke-width="1"/></pattern>
+      <marker id="bp-arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#F7923A"/></marker>
+    </defs>
+    <rect width="760" height="560" fill="url(#bp-grid)"/>
+    <!-- aircraft -->
+    <g class="bp-air">
+      <path pathLength="1" d="M316 52 H444"/>
+      <path pathLength="1" d="M372 60 Q380 50 388 60"/>
+      <path pathLength="1" d="M360 78 Q380 56 400 78 L400 255 L388 435 L372 435 L360 255 Z"/>
+      <path pathLength="1" d="M118 130 H642 Q650 130 650 138 V207 Q650 215 642 215 H118 Q110 215 110 207 V138 Q110 130 118 130 Z"/>
+      <path pathLength="1" d="M305 395 H455 V435 H305 Z"/>
+      <path pathLength="1" d="M377 380 H383 V442 H377 Z"/>
+      <path class="bp-hinge" d="M120 197 H250 M510 197 H640 M307 420 H453"/>
+    </g>
+    <!-- dimensions -->
+    <g class="bp-dim">
+      <path pathLength="1" d="M110 222 V512 M650 222 V512 M305 442 V472 M455 442 V472 M658 130 H700 M658 215 H700 M352 60 H44 M366 435 H44"/>
+      <path pathLength="1" marker-start="url(#bp-arrow)" marker-end="url(#bp-arrow)" d="M112 500 H648"/>
+      <path pathLength="1" marker-start="url(#bp-arrow)" marker-end="url(#bp-arrow)" d="M307 462 H453"/>
+      <path pathLength="1" marker-start="url(#bp-arrow)" marker-end="url(#bp-arrow)" d="M690 132 V213"/>
+      <path pathLength="1" marker-start="url(#bp-arrow)" marker-end="url(#bp-arrow)" d="M56 62 V433"/>
+      <path pathLength="1" d="M386 400 L520 352 H600"/>
+      <path pathLength="1" d="M444 52 L520 30 H612"/>
+    </g>
+    <g class="bp-text">
+      <text x="380" y="492" text-anchor="middle">WING SPAN 108 CM</text>
+      <text x="380" y="458" text-anchor="middle" class="bp-sm">30 CM</text>
+      <text x="704" y="178" class="bp-sm">17 CM</text>
+      <text x="44" y="250" transform="rotate(-90 44 250)" text-anchor="middle">FUSELAGE 75 CM</text>
+      <text x="524" y="344" class="bp-sm">FIN 20 CM</text>
+      <text x="524" y="22" class="bp-sm">PROP 10 × 4.5</text>
+      <text x="200" y="180" class="bp-xs" text-anchor="middle">AILERON</text>
+      <text x="560" y="180" class="bp-xs" text-anchor="middle">AILERON</text>
+    </g>
+    <g class="bp-block">
+      <rect x="20" y="518" width="300" height="30" rx="4"/>
+      <text x="32" y="538">WB TRAINER · TOP VIEW · ≈ 800 G</text>
+    </g>
+  </svg>
+</figure></div>
+        <div class="spec ac-mat" data-reveal>
+          <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z" /><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65" /><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65" /></svg> Materials</h3>
+          <dl>
+            <div><dt>Airframe</dt><dd>Foam board / Depron</dd></div>
+            <div><dt>Reinforcement</dt><dd>Balsa and plywood</dd></div>
+            <div><dt>Spars and rods</dt><dd>Carbon fibre tubes / aluminium rods</dd></div>
+            <div><dt>Linkages</dt><dd>Pushrods and control horns</dd></div>
+            <div><dt>Adhesives</dt><dd>Hot glue and CA glue</dd></div>
+            <div><dt>Templates</dt><dd>Scaled, printed build plans</dd></div>
+          </dl>
+        </div>
+      </div>
+      <div class="aircraft-col">
+        <div class="spec ac-size" data-reveal>
+          <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z" /><path d="m14.5 12.5 2-2" /><path d="m11.5 9.5 2-2" /><path d="m8.5 6.5 2-2" /><path d="m17.5 15.5 2-2" /></svg> Size</h3>
+          <dl>
+            <div><dt>Wing span</dt><dd>108 cm</dd></div>
+            <div><dt>Chord</dt><dd>17 cm</dd></div>
+            <div><dt>Fuselage</dt><dd>75 cm</dd></div>
+            <div><dt>Horizontal stabiliser</dt><dd>30 cm</dd></div>
+            <div><dt>Vertical stabiliser</dt><dd>20 cm</dd></div>
+            <div><dt>Weight</dt><dd>About 800 g</dd></div>
+          </dl>
+        </div>
+        <div class="spec ac-elec" data-reveal>
+          <h3><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="16" height="16" x="4" y="4" rx="2" /><rect width="6" height="6" x="9" y="9" rx="1" /><path d="M15 2v2" /><path d="M15 20v2" /><path d="M2 15h2" /><path d="M2 9h2" /><path d="M20 15h2" /><path d="M20 9h2" /><path d="M9 2v2" /><path d="M9 20v2" /></svg> Electronics</h3>
+          <dl>
+            <div><dt>Motor</dt><dd>A2212 1000KV brushless</dd></div>
+            <div><dt>Speed controller</dt><dd>30A ESC</dd></div>
+            <div><dt>Servos</dt><dd>4 × SG90 micro</dd></div>
+            <div><dt>Battery</dt><dd>3S 11.1V 3300 mAh LiPo</dd></div>
+            <div><dt>Radio</dt><dd>FlySky FS-i6, 6-channel</dd></div>
+            <div><dt>Propeller</dt><dd>10 × 4.5</dd></div>
+          </dl>
         </div>
       </div>
     </div>
-    <div class="grid grid-2 mt-2">
-      <div class="table-wrap spec-table">
-        <table>
-          <caption>Electronics</caption>
-          <tbody>
-            <tr><th scope="row">Motor</th><td>A2212 1000KV brushless</td></tr>
-            <tr><th scope="row">Speed controller</th><td>30A ESC</td></tr>
-            <tr><th scope="row">Servos</th><td>4 × SG90 micro servos</td></tr>
-            <tr><th scope="row">Battery</th><td>3S 11.1V 3300 mAh LiPo</td></tr>
-            <tr><th scope="row">Radio</th><td>FlySky FS-i6, 6-channel</td></tr>
-            <tr><th scope="row">Propeller</th><td>10 × 4.5</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="table-wrap spec-table">
-        <table>
-          <caption>Materials</caption>
-          <tbody>
-            <tr><th scope="row">Airframe</th><td>Foam board / Depron</td></tr>
-            <tr><th scope="row">Reinforcement</th><td>Balsa and plywood</td></tr>
-            <tr><th scope="row">Adhesives</th><td>Hot glue and CA glue</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+  </div>
+</section>
+
+<section class="section section--white" aria-labelledby="gets-title">
+  <div class="container">
+    <div class="section-head" data-reveal><span class="label">What students get</span><h2 id="gets-title">Skills they can see, touch and fly</h2></div>
+    <ul class="gets">
+      <li data-reveal><span class="badge "><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="16" height="20" x="4" y="2" rx="2" /><line x1="8" x2="16" y1="6" y2="6" /><line x1="16" x2="16" y1="14" y2="18" /><path d="M16 10h.01" /><path d="M12 10h.01" /><path d="M8 10h.01" /><path d="M12 14h.01" /><path d="M8 14h.01" /><path d="M12 18h.01" /><path d="M8 18h.01" /></svg></span><span>Design and calculate their own trainer</span></li><li data-reveal><span class="badge "><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12.8 19.6A2 2 0 1 0 14 16H2" /><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2" /><path d="M9.8 4.4A2 2 0 1 1 11 8H2" /></svg></span><span>Aerodynamics</span></li><li data-reveal><span class="badge "><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9" /><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5" /><circle cx="12" cy="12" r="2" /><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5" /><path d="M19.1 4.9C23 8.8 23 15.1 19.1 19" /></svg></span><span>Avionics</span></li><li data-reveal><span class="badge "><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 7h1a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2" /><path d="M6 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h1" /><path d="m11 7-3 5h4l-3 5" /><line x1="22" x2="22" y1="11" y2="13" /></svg></span><span>Power systems</span></li><li data-reveal><span class="badge "><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg></span><span>Hands-on team build, all tools provided</span></li><li data-reveal><span class="badge "><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 22h20" /><path d="M6.36 17.4 4 17l-2-4 1.1-.55a2 2 0 0 1 1.8 0l.17.1a2 2 0 0 0 1.8 0L8 12 5 6l.9-.45a2 2 0 0 1 2.09.2l4.02 3a2 2 0 0 0 2.1.2l4.19-2.06a2.41 2.41 0 0 1 1.73-.17L21 7a1.4 1.4 0 0 1 .87 1.99l-.38.76c-.23.46-.6.84-1.07 1.08L7.58 17.2a2 2 0 0 1-1.22.18Z" /></svg></span><span>Live flight demo on campus</span></li><li data-reveal><span class="badge "><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" /><path d="M9 13a4.5 4.5 0 0 0 3-4" /><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5" /><path d="M3.477 10.896a4 4 0 0 1 .585-.396" /><path d="M6 18a4 4 0 0 1-1.967-.516" /><path d="M12 13h4" /><path d="M12 18h6a2 2 0 0 1 2 2v1" /><path d="M12 8h8" /><path d="M16 8V5a2 2 0 0 1 2-2" /><circle cx="16" cy="13" r=".5" /><circle cx="18" cy="3" r=".5" /><circle cx="20" cy="21" r=".5" /><circle cx="20" cy="8" r=".5" /></svg></span><span>AI in aviation</span></li><li data-reveal><span class="badge "><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" /><circle cx="12" cy="8" r="6" /></svg></span><span>Certificate for every participant</span></li>
+    </ul>
   </div>
 </section>
 
 <section class="section section--dark cta-band" aria-labelledby="cta-title">
   <div class="glow" aria-hidden="true"></div>
-  <div class="container">
+  <div class="container" data-reveal>
     <span class="label">Ready for take-off?</span>
     <h2 id="cta-title">Give your students a real build</h2>
     <p>Pick the 2-day build workshop or the 1-day version. We will plan it around your calendar.</p>
     <div class="btn-row">
-      <a class="btn btn--primary" href="book.html"><i data-lucide="calendar-check" aria-hidden="true"></i> Book a workshop</a>
-      <a class="btn btn--ghost" href="downloads/wingbound-proposal.pdf" download><i data-lucide="download" aria-hidden="true"></i> Download proposal (PDF)</a>
+      <a class="btn btn--primary btn--lg" href="contact.html">Get in touch <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></a>
+      <a class="btn btn--ghost" href="https://wa.me/916281843302?text=Hi%20WingBound%2C%20I%27d%20like%20to%20know%20more%20about%20your%20workshops." target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 3C8.86 3 3.03 8.82 3.03 16c0 2.3.6 4.53 1.74 6.5L3 29l6.68-1.75A13 13 0 0 0 16.04 29C23.2 29 29 23.18 29 16S23.2 3 16.04 3Zm0 23.8c-2 0-3.94-.53-5.64-1.55l-.4-.24-3.97 1.04 1.06-3.86-.26-.4A10.77 10.77 0 0 1 5.24 16c0-5.95 4.85-10.8 10.8-10.8 5.94 0 10.77 4.85 10.77 10.8 0 5.96-4.83 10.8-10.77 10.8Zm5.92-8.08c-.33-.16-1.93-.95-2.23-1.06-.3-.11-.52-.16-.73.17-.22.32-.84 1.05-1.03 1.27-.19.22-.38.24-.7.08-.33-.16-1.38-.51-2.62-1.62-.97-.86-1.62-1.93-1.81-2.25-.19-.33-.02-.5.14-.66.15-.15.33-.38.49-.57.16-.19.22-.33.33-.54.11-.22.05-.41-.03-.57-.08-.16-.73-1.76-1-2.41-.26-.63-.53-.55-.73-.56h-.62c-.22 0-.57.08-.87.41-.3.32-1.14 1.11-1.14 2.71s1.17 3.15 1.33 3.36c.16.22 2.3 3.5 5.56 4.91.78.34 1.39.54 1.86.69.78.25 1.49.21 2.05.13.63-.09 1.93-.79 2.2-1.55.27-.76.27-1.42.19-1.55-.08-.14-.3-.22-.62-.38Z"/></svg> WhatsApp us</a>
     </div>
   </div>
 </section>
@@ -218,16 +314,19 @@
 </main>
 <footer class="site-footer">
   <div class="container">
-    <div class="footer-grid">
-      <div>
+    <div class="footer-top">
+      <div class="footer-brand">
         <a class="brand" href="index.html" aria-label="WingBound home">
           <picture><source srcset="assets/img/logo-240.webp" type="image/webp"><img src="assets/img/logo-240.png" alt="" width="240" height="165" loading="lazy"></picture>
           <span class="brand-word">WINGBOUND</span>
         </a>
-        <p class="footer-tag">DESIGN. BUILD. FLY.</p>
-        <p>Hands-on RC aircraft and AI workshops for schools and colleges in Andhra Pradesh. Based in Visakhapatnam.</p>
+        <p>Hands-on RC aircraft and AI workshops for schools and colleges across Andhra Pradesh. Based in Visakhapatnam.</p>
+        <div class="btn-row">
+          <a class="btn btn--primary btn--sm" href="contact.html">Get in touch <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></a>
+          <a class="btn btn--ghost btn--sm" href="https://wa.me/916281843302?text=Hi%20WingBound%2C%20I%27d%20like%20to%20know%20more%20about%20your%20workshops." target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 3C8.86 3 3.03 8.82 3.03 16c0 2.3.6 4.53 1.74 6.5L3 29l6.68-1.75A13 13 0 0 0 16.04 29C23.2 29 29 23.18 29 16S23.2 3 16.04 3Zm0 23.8c-2 0-3.94-.53-5.64-1.55l-.4-.24-3.97 1.04 1.06-3.86-.26-.4A10.77 10.77 0 0 1 5.24 16c0-5.95 4.85-10.8 10.8-10.8 5.94 0 10.77 4.85 10.77 10.8 0 5.96-4.83 10.8-10.77 10.8Zm5.92-8.08c-.33-.16-1.93-.95-2.23-1.06-.3-.11-.52-.16-.73.17-.22.32-.84 1.05-1.03 1.27-.19.22-.38.24-.7.08-.33-.16-1.38-.51-2.62-1.62-.97-.86-1.62-1.93-1.81-2.25-.19-.33-.02-.5.14-.66.15-.15.33-.38.49-.57.16-.19.22-.33.33-.54.11-.22.05-.41-.03-.57-.08-.16-.73-1.76-1-2.41-.26-.63-.53-.55-.73-.56h-.62c-.22 0-.57.08-.87.41-.3.32-1.14 1.11-1.14 2.71s1.17 3.15 1.33 3.36c.16.22 2.3 3.5 5.56 4.91.78.34 1.39.54 1.86.69.78.25 1.49.21 2.05.13.63-.09 1.93-.79 2.2-1.55.27-.76.27-1.42.19-1.55-.08-.14-.3-.22-.62-.38Z"/></svg> WhatsApp</a>
+        </div>
       </div>
-      <nav aria-label="Footer: workshop">
+      <nav class="footer-col" aria-label="Footer: workshop">
         <h2>Workshop</h2>
         <ul>
           <li><a href="workshop.html">The Workshop</a></li>
@@ -236,33 +335,33 @@
           <li><a href="gallery.html">Gallery</a></li>
         </ul>
       </nav>
-      <nav aria-label="Footer: schools">
+      <nav class="footer-col" aria-label="Footer: schools">
         <h2>Schools</h2>
         <ul>
           <li><a href="schools.html">For Schools &amp; Colleges</a></li>
-          <li><a href="book.html">Book a workshop</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li><a href="about.html">About us</a></li>
-          <li><a href="downloads/wingbound-proposal.pdf" download>Proposal (PDF)</a></li>
-          <li><a href="downloads/wingbound-flyer.pdf" download>Flyer (PDF)</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          
         </ul>
       </nav>
-      <div>
-        <h2>Contact</h2>
-        <ul>
-          <li><strong style="color:#fff">Nikhil Kalyan</strong><br><a href="tel:+918332032455">+91 83320 32455</a><br><a href="mailto:writetonikhilkalyan@gmail.com">writetonikhilkalyan@gmail.com</a></li>
-          <li><strong style="color:#fff">Thoran Prakash</strong><br><a href="tel:+919581546640">+91 95815 46640</a><br><a href="mailto:thoranprakash23@gmail.com">thoranprakash23@gmail.com</a></li>
+      <div class="footer-col">
+        <h2>Talk to us</h2>
+        <ul class="footer-contacts">
+          <li><strong>Nikhil Kalyan</strong><a href="tel:+916281843302">+91 62818 43302</a><a href="mailto:writetonikhilkalyan@gmail.com">writetonikhilkalyan@gmail.com</a></li>
+          <li><strong>Thoran Prakash</strong><a href="tel:+919581546640">+91 95815 46640</a><a href="mailto:thoranprakash23@gmail.com">thoranprakash23@gmail.com</a></li>
         </ul>
       </div>
     </div>
+    <svg class="footer-mark" viewBox="0 0 1000 104" aria-hidden="true" focusable="false"><text x="2" y="96" textLength="996" lengthAdjust="spacingAndGlyphs">DESIGN. BUILD. FLY.</text></svg>
     <div class="footer-bottom">
       <p>Student photos are shared only with parental consent.</p>
-      <p>&copy; <span data-year>2026</span> WingBound, Visakhapatnam. All rights reserved.</p>
+      <p>&copy; <span data-year>2026</span> WingBound, Visakhapatnam</p>
     </div>
   </div>
 </footer>
-<a class="wa-float" href="https://wa.me/918332032455?text=Hi%20WingBound%2C%20I%27d%20like%20to%20know%20more%20about%20a%20workshop%20for%20our%20institution." target="_blank" rel="noopener" aria-label="Chat with WingBound on WhatsApp (opens in a new tab)">
-  <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 3C8.86 3 3.03 8.82 3.03 16c0 2.3.6 4.53 1.74 6.5L3 29l6.68-1.75A13 13 0 0 0 16.04 29C23.2 29 29 23.18 29 16S23.2 3 16.04 3Zm0 23.8c-2 0-3.94-.53-5.64-1.55l-.4-.24-3.97 1.04 1.06-3.86-.26-.4A10.77 10.77 0 0 1 5.24 16c0-5.95 4.85-10.8 10.8-10.8 5.94 0 10.77 4.85 10.77 10.8 0 5.96-4.83 10.8-10.77 10.8Zm5.92-8.08c-.33-.16-1.93-.95-2.23-1.06-.3-.11-.52-.16-.73.17-.22.32-.84 1.05-1.03 1.27-.19.22-.38.24-.7.08-.33-.16-1.38-.51-2.62-1.62-.97-.86-1.62-1.93-1.81-2.25-.19-.33-.02-.5.14-.66.15-.15.33-.38.49-.57.16-.19.22-.33.33-.54.11-.22.05-.41-.03-.57-.08-.16-.73-1.76-1-2.41-.26-.63-.53-.55-.73-.56h-.62c-.22 0-.57.08-.87.41-.3.32-1.14 1.11-1.14 2.71s1.17 3.15 1.33 3.36c.16.22 2.3 3.5 5.56 4.91.78.34 1.39.54 1.86.69.78.25 1.49.21 2.05.13.63-.09 1.93-.79 2.2-1.55.27-.76.27-1.42.19-1.55-.08-.14-.3-.22-.62-.38Z"/></svg><span>WhatsApp us</span>
-</a>
+<aside aria-label="Quick contact">
+  <a class="wa-float" href="https://wa.me/916281843302?text=Hi%20WingBound%2C%20I%27d%20like%20to%20know%20more%20about%20your%20workshops." target="_blank" rel="noopener" aria-label="Chat with WingBound on WhatsApp (opens in a new tab)"><svg class="icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 3C8.86 3 3.03 8.82 3.03 16c0 2.3.6 4.53 1.74 6.5L3 29l6.68-1.75A13 13 0 0 0 16.04 29C23.2 29 29 23.18 29 16S23.2 3 16.04 3Zm0 23.8c-2 0-3.94-.53-5.64-1.55l-.4-.24-3.97 1.04 1.06-3.86-.26-.4A10.77 10.77 0 0 1 5.24 16c0-5.95 4.85-10.8 10.8-10.8 5.94 0 10.77 4.85 10.77 10.8 0 5.96-4.83 10.8-10.77 10.8Zm5.92-8.08c-.33-.16-1.93-.95-2.23-1.06-.3-.11-.52-.16-.73.17-.22.32-.84 1.05-1.03 1.27-.19.22-.38.24-.7.08-.33-.16-1.38-.51-2.62-1.62-.97-.86-1.62-1.93-1.81-2.25-.19-.33-.02-.5.14-.66.15-.15.33-.38.49-.57.16-.19.22-.33.33-.54.11-.22.05-.41-.03-.57-.08-.16-.73-1.76-1-2.41-.26-.63-.53-.55-.73-.56h-.62c-.22 0-.57.08-.87.41-.3.32-1.14 1.11-1.14 2.71s1.17 3.15 1.33 3.36c.16.22 2.3 3.5 5.56 4.91.78.34 1.39.54 1.86.69.78.25 1.49.21 2.05.13.63-.09 1.93-.79 2.2-1.55.27-.76.27-1.42.19-1.55-.08-.14-.3-.22-.62-.38Z"/></svg><span>WhatsApp us</span></a>
+</aside>
 </body>
 </html>
